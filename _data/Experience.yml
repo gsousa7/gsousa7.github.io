@@ -2,21 +2,46 @@ subject: Experiences
 listing-order: 2
 icon: "/assets/img/briefcase.svg"
 contents:
-  - title: Nanosoft
-    role: Project Manager
+  - title: AXA Group Operations
+    role: DevOps Engineer
     description:
-      - Led development of a new chatbot software utilizing large language model
-      - Co-designer of '*Kopilot*' and '*Gemmini*'
-    date: Jan. 2024 - Ongoing
-  - title: Amazone
-    role: Senior Software Engineer
+      - Providing support on Azure focused in both Platform as a Service (Paas) and Infrastructure as a Service (IaaS)
+      - Working with Agile methodology to ensure high quality delivery and support on a daily basis
+      - Deploying Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
+      - Automating processes with Bash & PowerShell scripting and Azure DevOps pipelines
+      - Providing support (Changes, Incidents and Requests) using JIRA and ServiceNow
+      - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
+      - Collaborating with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
+      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+    date: September 2024 - Ongoing
+  - title: Timestamp
+    role: Cloud Engineer
     description: 
-      - Built a Java microservice, database schema to manage customer accounts
-      - Enhanced internal pipelines to query real-time data from client devices
-    date: Apr. 2016 - Dec. 2018
-  - title: Pacebook
-    role: Software Engineer Intern
+      - Provided support on Azure focused in both Platform as a Service (Paas) and Infrastructure as a Service (IaaS)
+      - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
+      - Managed and troubleshot Windows Server and Linux Virtual Machines
+      - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
+      - Automated processes with Bash scripting
+      - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
+      - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Azure DevOps, Jira, and ServiceNow
+      - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
+      - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
+      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+    date: April 2022 - September 2024
+  - title: Timestamp
+    role: Linux System Administrator
     description: 
-      - Designed the dynamic website using React for data visualization
-      - Integrated '*Yolo*' to boost the accuracy of the object detection
-    date: Jul. 2013 - Sep. 2013
+      - Deployed, configured, maintained and troubleshoot servers including Dell, HP, Oracle Server and Oracle Engineered Systems (Exadata, Exalogic, and Private Cloud Appliance)
+      - Managed Linux server deployment, configuration, maintenance, tuning and troubleshooting across RHEL and Debian distributions
+      - Deployed, configured, managed and troubleshoot virtualization platforms (Exalogic, Oracle Virtual Manager and Oracle Linux Virtualization Manager) and respective virtual machines
+      - Implemented backup solutions and system monitoring using BareOS, EMC NetWorker, Oracle Secure Backup, CheckMK, Nagios and Oracle Enterprise Manager
+      - Automated processes with Ansible and Bash scripting
+      - Deployed, configured, maintained and troubleshoot storage (LVM, NFS, Oracle ZFS Appliance), networking (firewalld and iptables), and containerization (Docker with Docker compose) environments
+      - Configured, maintained and troubleshot web services and print management using Apache HTTP Server, NGINX, and CUPS
+      - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Redmine, ServiceNow, and iTop
+      - Implemented Oracle technology-driven projects across different business sectors
+      - Created and maintained comprehensive technical documentation for installations, deployments, architecture, changes, incidents and processes using Microsoft OneNote
+      - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
+      - Provided 24/7 on-call support
+      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+    date: September 2018 - April 2022
