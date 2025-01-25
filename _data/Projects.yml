@@ -7,7 +7,7 @@ contents:
       - Designed and maintained a self-hosted environment using Proxmox for media management, hands-on experience and skill development
       - Deployed and managed services through virtual machines and containers (LXC and Docker), including Pi-Hole for network-wide ad-blocking, NGINX for reverse proxy and web hosting, self-hosted GitLab for version control and CI/CD implementation, Prometheus and Grafana for monitoring and visualization, and a variety of other services
       - Automated resource provisioning and configuration using Ansible and Terraform
-      - Continuously expanded and optimized the environment to integrate additional services for network management, security, and development
+      - Continuously expanded and optimized the environment to integrate additional services for network management, security, media tools and development
 #  - title: "PiTorch ([https://pitorch.org/](https://pytorch.org/))" 
 #    description: 
 #      - Machine learning library for applications such as computer vision and natural language processing
