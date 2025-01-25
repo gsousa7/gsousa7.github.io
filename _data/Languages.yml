@@ -2,5 +2,7 @@ subject: Languages
 listing-order: 7
 icon: "/assets/img/globe.svg"
 contents:
-  - title: "Portuguese ('*Native*'): <span style='color: goldenrod; margin: auto 8px; font-family: cursive;'>●●●●●</span>"
-  - title: "English: <span style='color: cornflowerblue; margin: auto 8px; font-family: cursive;'>●●●●○</span>"
+#  - title: "Portuguese ('*Native*'): <span style='color: goldenrod; margin: auto 8px; font-family: cursive;'>●●●●●</span>"
+#  - title: "English: <span style='color: cornflowerblue; margin: auto 8px; font-family: cursive;'>●●●●○</span>"
+   - title: "Portuguese: Native"
+   - title: "English: Highly proficient in speaking and writing"
