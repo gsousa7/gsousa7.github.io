@@ -5,7 +5,7 @@ contents:
   - title: AXA Group Operations
     role: DevOps Engineer
     description:
-      - Providing support on Azure focused in both Platform as a Service (Paas) and Infrastructure as a Service (IaaS)
+      - Providing support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
       - Working with Agile methodology to ensure high quality delivery and support on a daily basis
       - Deploying Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
       - Automating processes with Bash & PowerShell scripting and Azure DevOps pipelines
@@ -13,11 +13,11 @@ contents:
       - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
       - Collaborating with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
       - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: September 2024 - Ongoing
+    date: Sep. 2024 - Ongoing
   - title: Timestamp
     role: Cloud Engineer
     description: 
-      - Provided support on Azure focused in both Platform as a Service (Paas) and Infrastructure as a Service (IaaS)
+      - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
       - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
       - Managed and troubleshot Windows Server and Linux Virtual Machines
       - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
@@ -27,7 +27,7 @@ contents:
       - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
       - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
       - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: April 2022 - September 2024
+    date: Apr. 2022 - Sep. 2024
   - title: Timestamp
     role: Linux System Administrator
     description: 
@@ -44,4 +44,4 @@ contents:
       - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
       - Provided 24/7 on-call support
       - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: September 2018 - April 2022
+    date: Sep. 2018 - Apr. 2022
