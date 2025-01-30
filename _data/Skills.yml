@@ -4,7 +4,7 @@ icon: "/assets/img/screwdriver-wrench.svg"
 contents:
   - title: Languages
     description: "
-      ![Bash](/assets/img/icons/bash-original.svg)
+      ![Bash]<img src='/assets/img/icons/bash-original.svg' alt='Bash' width='60' height='60' />
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg)
     "
