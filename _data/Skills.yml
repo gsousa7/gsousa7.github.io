@@ -39,11 +39,11 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg)
 
     "
-  - title: Cloud & Infrastructure
+  - title: Cloud, Virtualization & Infrastructure
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg)
-      <img src='/assets/img/icons/proxmox-icon.svg' alt='Proxmox' width='60' height='60' />
+      <img src='/assets/img/icons/proxmox-logo-stacked-color.svg' alt='Proxmox' width='60' height='60' />
     "
   
   - title: Tools
