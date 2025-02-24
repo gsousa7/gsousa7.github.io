@@ -3,23 +3,22 @@ profile_img: /assets/img/profile.png
 icon_img: /assets/img/favicon.ico
 
 name: "Gonçalo Sousa"
-job: "〈DevOps Engineer〉"
+job: "〈 DevOps Engineer 〉"
 
 address: Seixal, Portugal
 linkedin_username: gsousa7
 github_username: gsousa7
-
 
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /resume
 baseurl:
 
 exclude:
-  - _posts/
-  - resources/
-  - vendor/
+- _posts/
+- resources/
+- vendor/
 
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
