@@ -5,7 +5,6 @@ contents:
   - title: Languages
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg)
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg)
     "
   - title: Operating Systems
@@ -45,7 +44,7 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg)
       <img src='/assets/img/icons/proxmox-icon.svg' alt='Proxmox' width='60' height='60' />
     "
-  
+
   - title: Tools
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg)
