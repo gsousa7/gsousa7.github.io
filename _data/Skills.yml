@@ -30,6 +30,7 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg)
     "
+    # Add HAProxy
   - title: Containerization & Orchestration
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg)
@@ -39,11 +40,14 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg)
-
     "
+    # Add Loki
+    # Add Tempo or similiar
+    # Add Mimir or Similiar
   - title: Cloud, Virtualization & Infrastructure
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg)
-      <img src='/assets/img/icons/proxmox-icon.svg' alt='Proxmox' width='60' height='60' />
     "
+    # Add Proxmox
+    # Add KVM
