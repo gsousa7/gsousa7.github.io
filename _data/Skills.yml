@@ -4,12 +4,15 @@ icon: "/assets/img/screwdriver-wrench.svg"
 contents:
   - title: Languages
     description: "
-      <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg' title='Bash' />
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg)
     "
   - title: Operating Systems
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original.svg)
+
     "
   - title: Continuous Integration & Continuous Delivery
     description: "
