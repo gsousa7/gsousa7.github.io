@@ -35,6 +35,8 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg)
     "
+    #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original-wordmark.svg)
+    #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg)
   #- title: Monitoring & Observability
   #  description: "
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
@@ -49,3 +51,9 @@ contents:
     "
     # Add KVM
     #![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
+  
+  #- title: Secrets Management & Service Discovery
+  #  description: "
+  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original-wordmark.svg)
+  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/consul/consul-original-wordmark.svg)
+  #"
