@@ -5,7 +5,6 @@ contents:
   - title: Languages
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg)
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg)
     "
   - title: Operating Systems
     description: "
@@ -36,18 +35,17 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg)
     "
-  - title: Monitoring & Observability
-    description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg)
-    "
+  #- title: Monitoring & Observability
+  #  description: "
+  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
+  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg)
+  #  "
     # Add Loki
-    # Add Tempo or similiar
-    # Add Mimir or Similiar
+    
   - title: Cloud, Virtualization & Infrastructure
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg)
       ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg)
     "
     # Add KVM
+    #![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
