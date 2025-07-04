@@ -2,9 +2,10 @@ subject: Skills
 listing-order: 2
 icon: "/assets/img/screwdriver-wrench.svg"
 contents:
-  - title: Languages
+  - title: Scripting Languages
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg)
     "
   - title: Operating Systems
     description: "
@@ -37,23 +38,22 @@ contents:
     "
     #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original-wordmark.svg)
     #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg)
+    # add Istio and FluxCD
   #- title: Monitoring & Observability
   #  description: "
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg)
   #  "
-    # Add Loki
-    
+
   - title: Cloud, Virtualization & Infrastructure
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg)
       ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg)
     "
-    # Add KVM
-    #![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
-  
-  #- title: Secrets Management & Service Discovery
-  #  description: "
-  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original-wordmark.svg)
-  #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/consul/consul-original-wordmark.svg)
-  #"
+
+    # ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg)
+  - title: Infrastructure Services
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original-wordmark.svg)
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/consul/consul-original-wordmark.svg)
+  "
