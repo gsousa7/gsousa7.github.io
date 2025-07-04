@@ -26,7 +26,12 @@
   <div id="about">
     <div class="profile-zone">
       <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
-      <ul class="personal-info">
+    </div>
+    <div class="name-zone">
+      <h1>{{ site.name }}</h1>
+      <h2>{{ site.job }}</h2>
+    </div>
+  <ul class="personal-info">
         {% if site.phone_number %}
         <li><a aria-label="My Phone">
           <img src="{{ '/assets/img/phone.svg' | prepend: site.baseurl }}" alt="My Phone Number">
@@ -88,11 +93,6 @@
           </a></li>
         {% endif %}
       </ul>
-    </div>
-    <div class="name-zone">
-      <h1>{{ site.name }}</h1>
-      <h2>{{ site.job }}</h2>
-    </div>
   </div>
   <div id="contents">
     <ul>
