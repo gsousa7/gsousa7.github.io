@@ -340,36 +340,29 @@ a { text-decoration:none; }
 
         .profile-zone { margin:4rem auto; }
 
-        #about .personal-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1.5rem 0 2.5rem 0;
-  padding: 0;
-  list-style: none;
+        .profile-zone .profile-img { width:256px; }
 
-  li {
-    display: flex;
-    align-items: center;
-    height: auto;
-    margin: 0;
-    text-align: left;
-  }
+        .profile-zone .personal-info { min-width: 768px; }
 
-  img {
-    width: 20px;
-    margin-right: 0.5rem;
-  }
+        .profile-zone .personal-info {
+            a:hover{
+                span {
+                    font-size: 1rem;
+                    clip-path: inset(0 0 0 0);
+                };
+            }
 
-  span {
-    color: var(--font-dark);
-    font-size: 1rem;
-    margin-left: 0.25rem;
-    clip-path: none;
-    transition: none;
-  }
-}
+            li:nth-child(1) { margin-right: 7.25rem; }
+            li:nth-child(2) { margin-right: 8.25rem; }
+            li:nth-child(3) { margin-right: 8.75rem; }
+            li:nth-child(4) { margin-right: 8.25rem; }
+            li:nth-child(5) { margin-right: 7.25rem; }
+            li:nth-child(6) { margin-left: 7.25rem; }
+            li:nth-child(7) { margin-left: 8.25rem; }
+            li:nth-child(8) { margin-left: 8.75rem; }
+            li:nth-child(9) { margin-left: 8.25rem; }
+            li:nth-child(10) { margin-left: 7.25rem; }
+        }
     }
 
     #contents {
