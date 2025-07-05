@@ -104,6 +104,11 @@
             </div>
             {{ subject.subject }}
           </h2>
+          {% if subject.subject == "Contact" %}
+            <div class="contact-form-section">
+              <script type="text/javascript" src="https://form.jotform.com/jsform/251853786893375"></script>
+            </div>
+          {% else %}
           <ul>
               {% for member in subject.contents %}
               <li class="item">
@@ -134,6 +139,7 @@
               </li>
               {% endfor %}
           </ul>
+          {% endif %}
         </li>
       {% endfor %}
       </ul>
