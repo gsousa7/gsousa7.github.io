@@ -5,7 +5,7 @@ contents:
   - title: Scripting Languages
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg 'Bash')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg 'Python')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg 'Python')
     "
   - title: Operating Systems
     description: "
@@ -27,7 +27,7 @@ contents:
     "
   - title: Web Servers, Proxies & Reverse Proxies
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original-wordmark.svg 'Apache HTTPD')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg 'Apache HTTPD')
       ![devicon](/assets/img/HAProxy.png 'HAProxy')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg 'NGINX')
       ![devicon](/assets/img/squid.png 'Squid')
