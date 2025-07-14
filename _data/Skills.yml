@@ -25,10 +25,12 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg)
     "
-  - title: Web Servers & Reverse Proxies
+  - title: Web Servers, Proxies & Reverse Proxies
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original-wordmark.svg)
+      ![devicon](/assets/img/HAProxy.png)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg)
+      ![devicon](/assets/img/squid.png)
     "
     # Add HAProxy
   - title: Containerization & Orchestration
@@ -36,10 +38,10 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg)
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg)
       ![devicon](/assets/img/istio-stacked-color.svg)
+      ![devicon](/assets/img/flux-stacked-color.svg)
     "
     #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original-wordmark.svg)
     #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg)
-    # add Istio and FluxCD
   #- title: Monitoring & Observability
   #  description: "
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg)
