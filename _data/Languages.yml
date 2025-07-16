@@ -1,8 +1,8 @@
 subject: Languages
-listing-order: 6
+listing-order: 7
 icon: "/assets/img/globe.svg"
 contents:
-  - title: Portuguese
-    description: Native
-  - title: English
-    description: Highly proficient in speaking and writing
+- title: Portuguese
+  description: Native
+- title: English
+  description: Highly proficient in speaking and writing

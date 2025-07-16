@@ -1,12 +1,12 @@
 subject: Education
-listing-order: 4
+listing-order: 5
 icon: "/assets/img/graduation-cap.svg"
 contents:
-  - title: Network and Systems Administration, ATEC
-    description:
-      - EQF Level 5
-    date: Jun. 2016 - Sep. 2017
-  - title: Network and Systems Technician, ATEC
-    description:
-      - EQF Level 4
-    date: Nov. 2013 - May 2016
+- title: Network and Systems Administration, ATEC
+  description:
+  - EQF Level 5
+  date: Jun. 2016 - Sep. 2017
+- title: Network and Systems Technician, ATEC
+  description:
+  - EQF Level 4
+  date: Nov. 2013 - May 2016
