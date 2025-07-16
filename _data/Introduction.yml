@@ -2,7 +2,5 @@ subject: Introduction
 listing-order: 1
 icon: "assets/img/user.svg"
 contents:
-- description: |
-    Enthusiastic IT professional with a broad range of interests, including technology, books, games, and music. Dedicated to learning new tools and methodologies to deliver effective solutions, with a strong curiosity for uncovering the "Why" and "How" behind challenges.
-
-    Seeking a new challenge involving Linux environments (cloud or on-premises), automation, and infrastructure-focused CI/CD, as well as containerization with Docker and Kubernetes. If my profile aligns with one of your open roles, feel free to contact me!
+  - description: |
+        Enthusiastic IT professional with a strong curiosity for uncovering the 'Why' and 'How' behind challenges, always trying to innovate and improve. Dedicated to learning new tools and methodologies to deliver effective solutions. I am seeking a new challenge involving Linux environments (cloud or on-premises), automation, and continuous delivery, as well as containerization with Docker and Kubernetes. If my profile aligns with one of your open roles, feel free to contact me!

@@ -1,0 +1,12 @@
+subject: Certificates
+listing-order: 4
+icon: "/assets/img/throphy.svg"
+contents:
+- title: Red Hat Certified System Administrator (RHCSA)
+  description:
+  - Certification ID: 200-086-106
+  date: 25th June 2020
+- title: Oracle Certified Associate Oracle Linux 5 and 6 System Administrator
+  date: 9th December 2019
+- title: Enterprise Open Workspace Administrator
+  date: 10th March - 10th March 2024
