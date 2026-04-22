@@ -36,13 +36,14 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg 'Docker')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
-    "
-    #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original-wordmark.svg 'ArgoCD')
-    #  ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg 'Helm')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original-wordmark.svg 'ArgoCD')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg 'Helm')
     #  ![devicon](/assets/img/istio-stacked-color.svg 'Istio')
     #  ![devicon](/assets/img/flux-stacked-color.svg 'FluxCD')
-  #- title: Monitoring & Observability
-  #  description: "
+    "
+  - title: Monitoring & Observability
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original-wordmark.svg 'Datadog')
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg 'Prometheus')
   #    ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg 'Grafana')
   #  "
@@ -51,11 +52,9 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg 'Microsoft Azure')
       ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg 'Proxmox')
-    "
-
-    # ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg 'Amazon Web Services')
-  #- title: Infrastructure Services
-    #description: "
-      #![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original-wordmark.svg 'HashiCorp Vault')
-      #![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/consul/consul-original-wordmark.svg 'HashiCorp Consul')
-  #"
+     ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg 'Amazon Web Services')
+     "
+  - title: Infrastructure Services
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original-wordmark.svg 'HashiCorp Vault')
+      "

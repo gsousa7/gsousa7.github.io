@@ -2,46 +2,59 @@ subject: Experiences
 listing-order: 3
 icon: "/assets/img/briefcase.svg"
 contents:
-  - title: AXA Group Operations
-    role: DevOps Engineer
-    description:
-      - Providing support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
-      - Working with Agile methodology to ensure high quality delivery and support on a daily basis
-      - Deploying Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
-      - Automating processes with Bash & PowerShell scripting and Azure DevOps pipelines
-      - Providing support (Changes, Incidents and Requests) using JIRA and ServiceNow
-      - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
-      - Collaborating with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
-      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: Sep. 2024 - Present
-  - title: Timestamp
-    role: Cloud Engineer
-    description: 
-      - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
-      - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
-      - Managed and troubleshot Windows Server and Linux Virtual Machines
-      - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
-      - Automated processes with Bash scripting
-      - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
-      - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Azure DevOps, Jira, and ServiceNow
-      - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
-      - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
-      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: Apr. 2022 - Sep. 2024
-  - title: Timestamp
-    role: Linux System Administrator
-    description: 
-      - Deployed, configured, maintained and troubleshoot servers including Dell, HP, Oracle Server and Oracle Engineered Systems (Exadata, Exalogic, and Private Cloud Appliance)
-      - Managed Linux server deployment, configuration, maintenance, tuning and troubleshooting across RHEL and Debian distributions
-      - Deployed, configured, managed and troubleshoot virtualization platforms (Exalogic, Oracle Virtual Manager and Oracle Linux Virtualization Manager) and respective virtual machines
-      - Implemented backup solutions and system monitoring using BareOS, EMC NetWorker, Oracle Secure Backup, CheckMK, Nagios and Oracle Enterprise Manager
-      - Automated processes with Ansible and Bash scripting
-      - Deployed, configured, maintained and troubleshoot storage (LVM, NFS, Oracle ZFS Appliance), networking (firewalld and iptables), and containerization (Docker with Docker compose) environments
-      - Configured, maintained and troubleshot web services and print management using Apache HTTP Server, NGINX, and CUPS
-      - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Redmine, ServiceNow, and iTop
-      - Implemented Oracle technology-driven projects across different business sectors
-      - Created and maintained comprehensive technical documentation for installations, deployments, architecture, changes, incidents and processes using Microsoft OneNote
-      - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
-      - Provided 24/7 on-call support
-      - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-    date: Sep. 2018 - Apr. 2022
+- title: Richemont
+  role: DevOps Engineer
+  description:
+  - Worked within Agile ceremonies (standups, sprint planning, architectural review & design) to ensure high-quality delivery and continuous improvement across industrial manufacturing platforms
+  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis on the industrial manufacturing area
+  - Implemented end-to-end observability for Kubernetes Pods by instrumenting workloads with OpenTelemetry and integrating metrics, traces, and logs into Datadog
+  - Designed and maintained Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
+  - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable artifact storage and distribution across CI/CD pipelines
+  - Administered and supported multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each brand's operational requirements
+  - Tracked internal tasks and project progress in JIRA and managed incident response and service requests through ServiceNow
+  - Created and maintained technical documentation in Confluence
+  - Participated in Root Cause Analysis and Post-Mortem processes, documenting findings and driving corrective actions to improve platform reliability
+  date: Mar. 2026 - Present
+- title: AXA Group Operations
+  role: DevOps Engineer
+  description:
+  - Providing support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
+  - Working with Agile methodology to ensure high quality delivery and support on a daily basis
+  - Deploying Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
+  - Automating processes with Bash & PowerShell scripting and Azure DevOps pipelines
+  - Providing support (Changes, Incidents and Requests) using JIRA and ServiceNow
+  - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
+  - Collaborating with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
+  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+  date: Sep. 2024 - Feb. 2026
+- title: Timestamp
+  role: Cloud Engineer
+  description:
+  - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
+  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
+  - Managed and troubleshot Windows Server and Linux Virtual Machines
+  - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
+  - Automated processes with Bash scripting
+  - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
+  - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Azure DevOps, Jira, and ServiceNow
+  - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
+  - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
+  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+  date: Apr. 2022 - Sep. 2024
+- title: Timestamp
+  role: Linux System Administrator
+  description:
+  - Deployed, configured, maintained and troubleshoot servers including Dell, HP, Oracle Server and Oracle Engineered Systems (Exadata, Exalogic, and Private Cloud Appliance)
+  - Managed Linux server deployment, configuration, maintenance, tuning and troubleshooting across RHEL and Debian distributions
+  - Deployed, configured, managed and troubleshoot virtualization platforms (Exalogic, Oracle Virtual Manager and Oracle Linux Virtualization Manager) and respective virtual machines
+  - Implemented backup solutions and system monitoring using BareOS, EMC NetWorker, Oracle Secure Backup, CheckMK, Nagios and Oracle Enterprise Manager
+  - Automated processes with Ansible and Bash scripting
+  - Deployed, configured, maintained and troubleshoot storage (LVM, NFS, Oracle ZFS Appliance), networking (firewalld and iptables), and containerization (Docker with Docker compose) environments
+  - Configured, maintained and troubleshot web services and print management using Apache HTTP Server, NGINX, and CUPS
+  - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Redmine, ServiceNow, and iTop
+  - Implemented Oracle technology-driven projects across different business sectors
+  - Created and maintained comprehensive technical documentation for installations, deployments, architecture, changes, incidents and processes using Microsoft OneNote
+  - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
+  - Provided 24/7 on-call support
+  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
+  date: Sep. 2018 - Apr. 2022
