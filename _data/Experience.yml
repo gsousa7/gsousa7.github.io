@@ -6,11 +6,10 @@ contents:
   role: DevOps Engineer
   description:
   - Worked within Agile ceremonies (standups, sprint planning, architectural review & design) to ensure high-quality delivery and continuous improvement across industrial manufacturing platforms
-  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis on the industrial manufacturing area
   - Implemented end-to-end observability for Kubernetes Pods by instrumenting workloads with OpenTelemetry and integrating metrics, traces, and logs into Datadog
   - Designed and maintained Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
   - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable artifact storage and distribution across CI/CD pipelines
-  - Administered and supported multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each brand's operational requirements
+  - Managed and maintained multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each maison's operational requirements
   - Tracked internal tasks and project progress in JIRA and managed incident response and service requests through ServiceNow
   - Created and maintained technical documentation in Confluence
   - Participated in Root Cause Analysis and Post-Mortem processes, documenting findings and driving corrective actions to improve platform reliability
@@ -18,13 +17,17 @@ contents:
 - title: AXA Group Operations
   role: DevOps Engineer
   description:
-  - Providing support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
-  - Working with Agile methodology to ensure high quality delivery and support on a daily basis
-  - Deploying Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
-  - Automating processes with Bash & PowerShell scripting and Azure DevOps pipelines
-  - Providing support (Changes, Incidents and Requests) using JIRA and ServiceNow
+  - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
+  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
+  - Deployed Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
+  - Managed and troubleshot Windows Server and Linux Virtual Machines
+  - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
+  - Automated processes with Bash & PowerShell scripting and Azure DevOps pipelines
+  - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
+  - Automated processes with Bash scripting
+  - Provided product support (Changes, Incidents and Requests) using JIRA and ServiceNow
   - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
-  - Collaborating with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
+  - Collaborated with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
   date: Sep. 2024 - Feb. 2026
 - title: Timestamp

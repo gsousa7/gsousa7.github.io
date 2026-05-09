@@ -2,5 +2,5 @@ subject: Introduction
 listing-order: 1
 icon: "assets/img/user.svg"
 contents:
-  - description: |
-        Enthusiastic IT professional with a strong curiosity for uncovering the 'Why' and 'How' behind challenges, always trying to innovate and improve. Dedicated to learning new tools and methodologies to deliver effective solutions. I am seeking a new challenge involving Linux environments (cloud or on-premises), automation, and continuous delivery, as well as containerization with Docker and Kubernetes. If my profile aligns with one of your open roles, feel free to contact me!
+- description: |
+    IT professional with a background in Linux systems administration and cloud infrastructure, specializing in DevOps practices including container orchestration, automation, and observability. Driven by curiosity to uncover the 'Why' and 'How' behind complex systems, always looking to innovate and improve. Dedicated to continuously learning new tools and methodologies to deliver effective and reliable solutions.
