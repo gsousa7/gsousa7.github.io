@@ -12,13 +12,13 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg 'Linux')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg 'Debian')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original.svg 'Red Hat Enterprise Linux')
-
     "
   - title: Continuous Integration & Continuous Delivery
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg 'Git')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg 'GitLab')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg 'Azure DevOps')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg 'ArgoCD')
     "
   - title: Automation
     description: "
@@ -36,11 +36,9 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg 'Docker')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg 'ArgoCD')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg 'Helm')
       ![devicon](/assets/img/istio-stacked-color.svg 'Istio')
     "
-    #  ![devicon](/assets/img/flux-stacked-color.svg 'FluxCD')
   - title: Monitoring & Observability
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original.svg 'Datadog')
@@ -57,4 +55,9 @@ contents:
   - title: Infrastructure Services
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original.svg 'HashiCorp Vault')
+      "
+  - title: Agile & Collaboration Tools
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg 'Confluence')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg 'Jira')
       "
