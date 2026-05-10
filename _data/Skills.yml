@@ -37,7 +37,7 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg 'Docker')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg 'Helm')
-      ![devicon](/assets/img/istio-stacked-color.svg 'Istio')
+      ![devicon](/assets/img/istio-icon-color.svg 'Istio')
     "
   - title: Monitoring & Observability
     description: "
@@ -50,7 +50,7 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg 'Microsoft Azure')
       ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg 'Proxmox')
-     ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg 'Amazon Web Services')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg 'Amazon Web Services')
      "
   - title: Infrastructure Services
     description: "
