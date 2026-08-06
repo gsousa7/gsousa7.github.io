@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('img[alt="devicon"][title]').forEach((icon) => {
+        const wrap = document.createElement('span');
+        wrap.className = 'devicon-tip';
+        wrap.dataset.tip = icon.title;
+        icon.removeAttribute('title');
+        icon.replaceWith(wrap);
+        wrap.append(icon);
+    });
+
     const tocbox = document.querySelector('.toc-box');
     var headers = document.querySelectorAll('.subject-name');
 
@@ -23,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var contents = document.querySelectorAll('.subject, .item');
 
-    setInterval(function(){
+    function updateScrollState(skipTransition){
         var scrollPos = document.documentElement.scrollTop;
         var wh = window.innerHeight;
 
@@ -46,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
             if (scrollPos < contentPos) return;
 
+            if (skipTransition) c.style.transition = 'none';
+
             c.classList.add('appear');
         });
 
@@ -53,5 +64,18 @@ document.addEventListener('DOMContentLoaded', function(){
             let tocLink = document.getElementById("toc-id-" + currHead.textContent);
             tocLink.classList.add('active');
         }
-    }, 200);
+    }
+
+    // Content already within view on first load should render immediately,
+    // not fade in — only re-enable the transition once that's painted.
+    updateScrollState(true);
+    requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+            Array.from(contents).forEach(function(c){
+                c.style.transition = '';
+            });
+        });
+    });
+
+    setInterval(updateScrollState, 200);
 });

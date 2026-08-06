@@ -3,6 +3,7 @@ listing-order: 3
 icon: "/assets/img/briefcase.svg"
 contents:
 - title: Richemont
+  url: "https://www.richemont.com/"
   role: DevOps Engineer
   description:
   - Worked within Agile ceremonies (standups, sprint planning, architectural review & design) to ensure high-quality delivery and continuous improvement across industrial manufacturing platforms
@@ -10,11 +11,14 @@ contents:
   - Designed and maintained Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
   - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable artifact storage and distribution across CI/CD pipelines
   - Managed and maintained multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each maison's operational requirements
+  - Monitored platform health via Datadog, opening incidents upon detection, resolving in-scope issues directly, and assigning or escalating to relevant internal teams or external parties (software vendors, Maison IT) when outside scope
+  - Owned incident communications end-to-end — notifying stakeholders on opening, providing periodic status updates on root cause and remediation progress, and reporting final resolution outcomes
   - Tracked internal tasks and project progress in JIRA and managed incident response and service requests through ServiceNow
   - Created and maintained technical documentation in Confluence
   - Participated in Root Cause Analysis and Post-Mortem processes, documenting findings and driving corrective actions to improve platform reliability
   date: Mar. 2026 - Present
 - title: AXA Group Operations
+  url: "https://www.axa.com/"
   role: DevOps Engineer
   description:
   - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
@@ -31,6 +35,7 @@ contents:
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
   date: Sep. 2024 - Feb. 2026
 - title: Timestamp
+  url: "https://www.timestampgroup.com/en"
   role: Cloud Engineer
   description:
   - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
@@ -45,6 +50,7 @@ contents:
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
   date: Apr. 2022 - Sep. 2024
 - title: Timestamp
+  url: "https://www.timestampgroup.com/en"
   role: Linux System Administrator
   description:
   - Deployed, configured, maintained and troubleshoot servers including Dell, HP, Oracle Server and Oracle Engineered Systems (Exadata, Exalogic, and Private Cloud Appliance)

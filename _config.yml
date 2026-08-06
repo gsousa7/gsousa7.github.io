@@ -1,13 +1,17 @@
 title: Gonçalo Sousa
-profile_img: /assets/img/profile.png
+description: "Gonçalo Sousa resume - DevOps Engineer"
+url: "https://gsousa7.github.io"
+profile_img: /assets/img/profile.jpg
 icon_img: /assets/img/favicon.ico
 
 name: "Gonçalo Sousa"
 job: "DevOps Engineer"
 
 address: Seixal, Portugal
+address_query: Seixal Municipality, Portugal
 linkedin_username: gsousa7
 github_username: gsousa7
+credly_username: gsousa7
 
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /resume
@@ -22,3 +26,6 @@ plugins:
 - jekyll-feed
 - jekyll-sitemap
 - jekyll-seo-tag
+
+kramdown:
+  smart_quotes: apos,apos,quot,quot
