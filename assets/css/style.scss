@@ -22,6 +22,10 @@
     --font-dark: #202424;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
     margin:0;
     padding:0;
