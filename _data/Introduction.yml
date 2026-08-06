@@ -2,5 +2,5 @@ subject: Introduction
 listing-order: 1
 icon: "assets/img/user.svg"
 contents:
-- description: |
-    IT professional with a background in Linux systems administration and cloud infrastructure, specializing in DevOps practices including container orchestration, automation, and observability. Driven by curiosity to uncover the 'Why' and 'How' behind complex systems, always looking to innovate and improve. Dedicated to continuously learning new tools and methodologies to deliver effective and reliable solutions.
+  - description: |
+        IT professional with a background in Linux systems administration and cloud infrastructure, currently focused on DevOps practices such as automation, containerization, and observability across infrastructure and platform environments. Hard-working and curious, always keen to dig into how things work and pick up new tools along the way. Friendly and easy-going, valuing good teamwork as much as solving technical problems.
