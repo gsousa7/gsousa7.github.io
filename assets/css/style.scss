@@ -22,6 +22,10 @@
     --font-dark: #202424;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
     margin:0;
     padding:0;
@@ -29,7 +33,7 @@ html, body {
 
 body { 
     margin:0 auto;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: var(--color-background);
     
     &:before{ display: none; }
@@ -54,6 +58,10 @@ a { text-decoration:none; }
         width: 100%;
         position: relative;
         margin: 3rem auto;
+        padding: 1.75rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: var(--theme4-medium);
 
         &:before {
@@ -67,31 +75,35 @@ a { text-decoration:none; }
         }
     }
 
-    .profile-zone .profile-img {
-        width:192px;
+    .profile-zone .profile-img-frame {
+        width:150px;
         aspect-ratio:1.0;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
         border-radius:50%;
         border: 4px solid var(--theme3-dark);
+        margin-bottom: 0.85rem;
+        overflow: hidden;
+    }
+
+    .profile-zone .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
     }
 
     .profile-zone .personal-info {
-        width: 100%;
-        height: 200px;
-        margin: auto;
-        columns: 2;
-        line-height: 250%;
-        padding: 1rem 0;
-        display: grid;
-        grid-template-rows: repeat(5, 40px);
-        grid-template-columns: repeat(2, 50%);
-        grid-auto-flow: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        gap: 0.5rem 1.75rem;
     }
 
-    .profile-zone .personal-info span { 
+    .profile-zone .personal-info span {
         color: white;
         display: inline-flex;
         font-size: 0;
@@ -107,13 +119,17 @@ a { text-decoration:none; }
         aspect-ratio:1.0;
         cursor: pointer;
         vertical-align: middle;
+        margin-right: 0.5rem;
         transition: all .75s;
         filter: invert(10%) sepia(4%) saturate(5321%) hue-rotate(201deg) brightness(99%) contrast(90%);
     }
 
     .profile-zone .personal-info {
+        li { height: 40px; }
+
         a {
             display: inline-flex;
+            align-items: center;
             cursor: pointer;
 
             &:hover {
@@ -123,52 +139,43 @@ a { text-decoration:none; }
                 }
             }
         }
-
-        li { height: 40px; }
-
-        li:nth-child(n+1):nth-child(-n+5) { 
-            text-align: right; 
-
-            img { 
-                order: 1; 
-                margin-right: 0.5rem;
-            }
-
-            div { order: 2; }
-        }
-
-        li:nth-child(n+6):nth-child(-n+10) { 
-            text-align: left; 
-
-            img { 
-                order: 2; 
-                margin-left: 0.5rem;
-            }
-
-            div { order: 1; }
-        }
-
-        li:nth-child(1) { margin-right: 5.25rem; }
-        li:nth-child(2) { margin-right: 6.25rem; }
-        li:nth-child(3) { margin-right: 6.75rem; }
-        li:nth-child(4) { margin-right: 6.25rem; }
-        li:nth-child(5) { margin-right: 5.25rem; }
-        li:nth-child(6) { margin-left: 5.25rem; }
-        li:nth-child(7) { margin-left: 6.25rem; }
-        li:nth-child(8) { margin-left: 6.75rem; }
-        li:nth-child(9) { margin-left: 6.25rem; }
-        li:nth-child(10) { margin-left: 5.25rem; }
     }
-    
+
     .name-zone { margin-top: -2rem; }
 
-    .name-zone h1, 
+    .name-zone h1,
     .name-zone h2 {
         margin: 0;
+        font-weight: 650;
     }
     
     .name-zone h1 { color: var(--theme3-dark); }
     .name-zone h2 { color: var(--theme4-dark); }
+
+    .name-zone #print-btn {
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 24px;
+        background: var(--theme4-medium);
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        img {
+            width: 16px;
+            aspect-ratio: 1.0;
+            filter: brightness(0) invert(1);
+        }
+
+        &:hover { background: var(--theme4-dim); }
+    }
 }
 
 #contents{
@@ -186,6 +193,7 @@ a { text-decoration:none; }
     .subject-name {
         margin: 3rem auto;
         color: var(--font-dark);
+        font-weight: 650;
         position: relative;
         margin-left: -16px;
         margin-bottom: 0;
@@ -247,10 +255,26 @@ a { text-decoration:none; }
 
         p, span { line-height: 150%; }
 
-        p { 
+        p {
             font-weight: 600;
             font-size: 16px;
             color: var(--font-dark);
+        }
+
+        .content-title-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--theme4-dark);
+            text-decoration: none;
+
+            &:hover { text-decoration: underline; }
+        }
+
+        .external-link-icon {
+            width: 13px;
+            height: 13px;
+            opacity: 0.6;
         }
     }
 
@@ -297,9 +321,37 @@ a { text-decoration:none; }
         vertical-align:middle;
     }
 
-    img[alt="devicon"] { 
+    img[alt="devicon"] {
         height: 60px;
         width: 60px;
+    }
+
+    .devicon-tip {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 4px 10px;
+            background: var(--font-dark);
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 1.4;
+            white-space: nowrap;
+            border-radius: 4px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            z-index: 5;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
     }
 
     ul + p { margin-top: -2rem; }
@@ -335,33 +387,22 @@ a { text-decoration:none; }
         background: var(--theme3-medium);
     }
 
-    #about { 
-        margin-bottom: 6rem; 
+    #about {
+        margin-bottom: 6rem;
 
-        .profile-zone { margin:4rem auto; }
+        .profile-zone { margin:4rem auto; padding: 2rem 1rem 1.25rem; }
 
-        .profile-zone .profile-img { width:256px; }
-
-        .profile-zone .personal-info { min-width: 768px; }
+        .profile-zone .profile-img-frame { width:190px; margin-bottom: 1rem; }
 
         .profile-zone .personal-info {
+            gap: 0.75rem 2.5rem;
+
             a:hover{
                 span {
                     font-size: 1rem;
                     clip-path: inset(0 0 0 0);
                 };
             }
-
-            li:nth-child(1) { margin-right: 7.25rem; }
-            li:nth-child(2) { margin-right: 8.25rem; }
-            li:nth-child(3) { margin-right: 8.75rem; }
-            li:nth-child(4) { margin-right: 8.25rem; }
-            li:nth-child(5) { margin-right: 7.25rem; }
-            li:nth-child(6) { margin-left: 7.25rem; }
-            li:nth-child(7) { margin-left: 8.25rem; }
-            li:nth-child(8) { margin-left: 8.75rem; }
-            li:nth-child(9) { margin-left: 8.25rem; }
-            li:nth-child(10) { margin-left: 7.25rem; }
         }
     }
 
@@ -454,5 +495,121 @@ a { text-decoration:none; }
         max-width: 1024px;
 
         img { max-width: 100%; }
+    }
+}
+
+@media print {
+    // Faithful to the on-screen site: keep colours, icon sizes and spacing as-is.
+    // Only override what's structurally required for a static, paginated PDF
+    // (scroll-reveal animations, hover-only content, sidebar/TOC, pagination).
+
+    #sidebar,
+    .toc-box,
+    #print-btn,
+    body::before {
+        display: none !important;
+    }
+
+    // The printable page area (paper size minus margins) can fall below the
+    // 768px breakpoint, silently disabling the desktop layout gated behind it.
+    // Re-declare that tier's rules unconditionally so print doesn't depend on
+    // the breakpoint firing.
+    #about {
+        margin-bottom: 6rem;
+
+        .profile-zone {
+            margin: 4rem auto;
+            min-height: 300px;
+
+            &:before { display: none !important; }
+        }
+
+        .profile-zone .profile-img-frame { width: 256px; }
+
+        .profile-zone .personal-info {
+            min-width: 768px;
+
+            li:nth-child(1) { margin-right: 7.25rem; }
+            li:nth-child(2) { margin-right: 8.25rem; }
+            li:nth-child(3) { margin-right: 8.75rem; }
+            li:nth-child(4) { margin-right: 8.25rem; }
+            li:nth-child(5) { margin-right: 7.25rem; }
+            li:nth-child(6) { margin-left: 7.25rem; }
+            li:nth-child(7) { margin-left: 8.25rem; }
+            li:nth-child(8) { margin-left: 8.75rem; }
+            li:nth-child(9) { margin-left: 8.25rem; }
+            li:nth-child(10) { margin-left: 7.25rem; }
+        }
+    }
+
+    // The contact list's text is only revealed on :hover on screen — make it
+    // permanently visible for print.
+    #about .personal-info span {
+        font-size: 1rem !important;
+        clip-path: inset(0 0 0 0) !important;
+    }
+
+    #contents {
+        width: 78%;
+        margin-left: 17%;
+
+        img { max-width: 640px; }
+
+        .subject { margin-top: 6rem; }
+
+        .item:nth-child(1) { margin-top: 2rem; }
+
+        .item ul { margin-top: 0; }
+
+        .subject-name {
+            margin-left: auto;
+            margin-bottom: 3rem;
+            padding: 0;
+            border: none;
+
+            div {
+                background: var(--theme3-dim);
+                border-radius: 50%;
+                position: absolute;
+                top: -16px;
+                padding: 8px;
+                margin-right: 24px;
+                margin-left: -72px;
+                transform: none;
+                display: inline-table;
+            }
+        }
+
+        .content-date { font-size: 16px; }
+        .content-date img { width: 24px; }
+
+        .content-header {
+            p { font-size: 18px; }
+
+            &:before { visibility: visible !important; }
+        }
+
+        .content-header p,
+        .content-date {
+            display: table-cell;
+        }
+    }
+
+    // Undo the scroll-triggered fade-in — everything must render immediately.
+    .subject, .item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    // Avoid orphaned headings/bullets split across a page boundary.
+    .subject-name,
+    .content-header {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .subitem {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }

@@ -10,13 +10,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
   {% seo %}
 
-  <link rel="icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
-  <link rel="shortcut icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
+  <link rel="icon" type="image/x-icon" href="{{ site.icon_img | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.icon_img | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;650;700&display=swap' rel='stylesheet'>
 </head>
 
 <body>
@@ -25,7 +24,9 @@
   </div>
   <div id="about">
     <div class="profile-zone">
-      <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
+      <div class="profile-img-frame">
+        <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
+      </div>
       <ul class="personal-info">
         {% if site.phone_number %}
         <li><a aria-label="My Phone">
@@ -34,7 +35,7 @@
         </a></li>
         {% endif %}
         {% if site.address %}
-        <li><a aria-label="My Address" href="https://www.google.com/maps/search/{{ site.address }}">
+        <li><a aria-label="My Address" href="https://www.google.com/maps/search/{{ site.address_query | default: site.address }}">
           <img src="{{ '/assets/img/location-dot.svg' | prepend: site.baseurl }}" alt="My Address">
           <div><span>{{ site.address }}</span></div>
         </a></li>
@@ -55,6 +56,12 @@
           <li><a aria-label="My Github" href="https://github.com/{{ site.github_username }}">
             <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My Github">
             <div><span>@{{ site.github_username }}</span></div>
+          </a></li>
+        {% endif %}
+        {% if site.credly_username %}
+          <li><a aria-label="My Credly" href="https://www.credly.com/users/{{ site.credly_username }}">
+            <img src="{{ '/assets/img/credly.svg' | prepend: site.baseurl }}" alt="My Credly">
+            <div><span>@{{ site.credly_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.twitter_username %}
@@ -92,6 +99,10 @@
     <div class="name-zone">
       <h1>{{ site.name }}</h1>
       <h2>{{ site.job }}</h2>
+      <a id="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF">
+        <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="Download CV as PDF">
+        <span>Download PDF</span>
+      </a>
     </div>
   </div>
   <div id="contents">
@@ -108,7 +119,20 @@
               {% for member in subject.contents %}
               <li class="item">
                   <div class="content-header">
-                    {{ member.title | markdownify }}
+                    {% if member.role %}
+                      <p>
+                        {{ member.role }} @
+                        {% if member.url %}
+                          <a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt=""></a>
+                        {% else %}
+                          {{ member.title | markdownify | strip_html | strip_newlines }}
+                        {% endif %}
+                      </p>
+                    {% elsif member.url %}
+                      <p><a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt=""></a></p>
+                    {% else %}
+                      {{ member.title | markdownify }}
+                    {% endif %}
                     {% if member.date %}
                       <span class="content-date">
                         <!-- <img src="{{ '/assets/img/calendar.webp' | prepend: site.baseurl}}" alt="date"> -->
@@ -117,7 +141,7 @@
                     {% endif %}
                   </div>
                   {% for item in member %}
-                    {% if item[0] != "title" and item[0] != "date" %}
+                    {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" %}
                       {% if item[1].first %}
                         <ul>
                           {% for subitem in item[1] %}
@@ -140,7 +164,7 @@
   </div>
   <div id="footer">
     <span>
-      Copyright © 2026
+      Copyright © {{ site.time | date: "%Y" }}
     </span>
   </div>
 </body>
