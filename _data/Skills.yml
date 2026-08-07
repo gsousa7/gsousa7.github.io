@@ -36,7 +36,8 @@ contents:
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg 'Docker')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg 'Helm')
+      ![devicon](https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg 'Helm')
+      ![devicon](/assets/img/kustomize.png 'Kustomize')
       ![devicon](/assets/img/istio-icon-color.svg 'Istio')
     "
   - title: Monitoring & Observability
