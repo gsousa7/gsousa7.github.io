@@ -19,13 +19,15 @@
 </head>
 
 <body>
-  <div id="sidebar">
-    <ul class="toc-box"></ul>
-  </div>
+  <div id="page-sidebar">
   <div id="about">
     <div class="profile-zone">
       <div class="profile-img-frame">
         <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
+      </div>
+      <div class="name-zone">
+        <h1>{{ site.name }}</h1>
+        <h2>{{ site.job }}</h2>
       </div>
       <ul class="personal-info">
         {% if site.phone_number %}
@@ -96,14 +98,14 @@
         {% endif %}
       </ul>
     </div>
-    <div class="name-zone">
-      <h1>{{ site.name }}</h1>
-      <h2>{{ site.job }}</h2>
-      <a id="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF">
-        <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="Download CV as PDF">
-        <span>Download PDF</span>
-      </a>
-    </div>
+  </div>
+  <div id="sidebar">
+    <ul class="toc-box"></ul>
+  </div>
+  <a id="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF">
+    <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="Download CV as PDF">
+    <span>Download CV as PDF</span>
+  </a>
   </div>
   <div id="contents">
     <ul>
