@@ -3,12 +3,9 @@ listing-order: 4
 icon: "/assets/img/trophy.svg"
 contents:
 - title: Red Hat Certified System Administrator (RHCSA)
-  description:
-  - "Certification ID: 200-086-106"
-  - "Issued: 25th June 2020"
+  date: Jun. 2020
+  description: "Certification ID: 200-086-106"
 - title: Oracle Certified Associate Oracle Linux 5 and 6 System Administrator
-  description:
-  - "Issued: 9th December 2019"
+  date: Dec. 2019
 - title: Enterprise Open Workspace Administrator
-  description:
-  - "Issued: 10th March 2022"
+  date: Mar. 2022
