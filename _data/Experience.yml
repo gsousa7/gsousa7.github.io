@@ -1,69 +1,52 @@
 subject: Experiences
-listing-order: 3
+listing-order: 2
 icon: "/assets/img/briefcase.svg"
 contents:
 - title: Richemont
   url: "https://www.richemont.com/"
   role: DevOps Engineer
   description:
-  - Worked within Agile ceremonies (standups, sprint planning, architectural review & design) to ensure high-quality delivery and continuous improvement across industrial manufacturing platforms
-  - Implemented end-to-end observability for Kubernetes Pods by instrumenting workloads with OpenTelemetry and integrating metrics, traces, and logs into Datadog
-  - Designed and maintained Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
-  - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable artifact storage and distribution across CI/CD pipelines
-  - Managed and maintained multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each maison's operational requirements
-  - Monitored platform health via Datadog, opening incidents upon detection, resolving in-scope issues directly, and assigning or escalating to relevant internal teams or external parties (software vendors, Maison IT) when outside scope
-  - Owned incident communications end-to-end — notifying stakeholders on opening, providing periodic status updates on root cause and remediation progress, and reporting final resolution outcomes
-  - Tracked internal tasks and project progress in JIRA and managed incident response and service requests through ServiceNow
-  - Created and maintained technical documentation in Confluence
+  - Implemented end-to-end observability for Kubernetes workloads with OpenTelemetry, and built Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
+  - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable storage and distribution across CI/CD pipelines
+  - Managed and supported platforms across all Maisons running our platform, ensuring availability, compliance, and alignment with each Maison's operational requirements
+  - Owned incident management end-to-end via Datadog — from detection and triage through escalation to internal teams or external vendors, and stakeholder communication through to resolution
   - Participated in Root Cause Analysis and Post-Mortem processes, documenting findings and driving corrective actions to improve platform reliability
-  date: Mar. 2026 - Present
+  - Tracked tasks and incidents across JIRA, ServiceNow, and Confluence, keeping technical documentation current
+  - Actively contributed to architectural reviews and design decisions through Agile ceremonies, driving continuous improvement across industrial manufacturing platforms
+  date: Mar. 2026 — Present
 - title: AXA Group Operations
   url: "https://www.axa.com/"
   role: DevOps Engineer
   description:
-  - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
-  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
-  - Deployed Azure resources with Terraform using Terraform Enterprise and Azure DevOps with ARM templates
-  - Managed and troubleshot Windows Server and Linux Virtual Machines
-  - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
-  - Automated processes with Bash & PowerShell scripting and Azure DevOps pipelines
-  - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
-  - Automated processes with Bash scripting
-  - Provided product support (Changes, Incidents and Requests) using JIRA and ServiceNow
-  - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
-  - Collaborated with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
-  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Sep. 2024 - Feb. 2026
+  - Provided Azure platform support across PaaS and IaaS, deploying and managing resources with Terraform (Terraform Enterprise) and ARM templates via Azure DevOps
+  - Managed and troubleshot Windows Server and Linux virtual machines, including a High-Performance Computing cluster (HPC Pack)
+  - Automated operational processes with Bash and PowerShell, integrated into Azure DevOps pipelines
+  - Reviewed Microsoft Defender for Cloud findings and implemented remediations aligned with architecture and security policy
+  - Handled product support (changes, incidents, requests) through JIRA and ServiceNow, keeping technical documentation current in Confluence
+  - Collaborated across Developers and L3 teams to troubleshoot and deliver specific requirements
+  - Onboarded newcomers to customer infrastructure, procedures, and ticket management through hands-on knowledge transfer
+  date: Sep. 2024 — Feb. 2026
 - title: Timestamp
   url: "https://www.timestampgroup.com/en"
   role: Cloud Engineer
   description:
-  - Provided support on Azure focused in both Platform as a Service (PaaS) and Infrastructure as a Service (IaaS)
-  - Worked with Agile methodology to ensure high quality delivery and support on a daily basis
-  - Managed and troubleshot Windows Server and Linux Virtual Machines
-  - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
-  - Automated processes with Bash scripting
-  - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
-  - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Azure DevOps, Jira, and ServiceNow
-  - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
-  - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
-  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Apr. 2022 - Sep. 2024
+  - Provided Azure platform support across PaaS and IaaS, managing Windows Server and Linux virtual machines and a High-Performance Computing cluster (HPC Pack)
+  - Reviewed Microsoft Defender for Cloud findings and implemented remediations aligned with architecture and security policy
+  - Automated operational processes with Bash scripting
+  - Handled customer support (changes, incidents, requests) across Azure DevOps, Jira, and ServiceNow, keeping technical documentation current in Confluence
+  - Collaborated across Developers, L3, and Systems teams to troubleshoot and deliver specific requirements
+  - Guided newcomers through customer infrastructure, procedures, and ticket management via structured knowledge transfer
+  date: Apr. 2022 — Sep. 2024
 - title: Timestamp
   url: "https://www.timestampgroup.com/en"
   role: Linux System Administrator
   description:
-  - Deployed, configured, maintained and troubleshoot servers including Dell, HP, Oracle Server and Oracle Engineered Systems (Exadata, Exalogic, and Private Cloud Appliance)
-  - Managed Linux server deployment, configuration, maintenance, tuning and troubleshooting across RHEL and Debian distributions
-  - Deployed, configured, managed and troubleshoot virtualization platforms (Exalogic, Oracle Virtual Manager and Oracle Linux Virtualization Manager) and respective virtual machines
-  - Implemented backup solutions and system monitoring using BareOS, EMC NetWorker, Oracle Secure Backup, CheckMK, Nagios and Oracle Enterprise Manager
-  - Automated processes with Ansible and Bash scripting
-  - Deployed, configured, maintained and troubleshoot storage (LVM, NFS, Oracle ZFS Appliance), networking (firewalld and iptables), and containerization (Docker with Docker compose) environments
-  - Configured, maintained and troubleshot web services and print management using Apache HTTP Server, NGINX, and CUPS
-  - Provided customer support across different business sectors (Changes, Incidents, and Requests) using Redmine, ServiceNow, and iTop
-  - Implemented Oracle technology-driven projects across different business sectors
-  - Created and maintained comprehensive technical documentation for installations, deployments, architecture, changes, incidents and processes using Microsoft OneNote
-  - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
+  - Deployed, configured, and maintained physical and virtual infrastructure (Dell/HP/Oracle servers, Oracle Engineered Systems, Oracle Virtual Manager, Oracle Linux Virtualization Manager) across RHEL and Debian environments
+  - Implemented backup and monitoring solutions using BareOS, EMC NetWorker, Oracle Secure Backup, CheckMK, Nagios, and Oracle Enterprise Manager
+  - Automated infrastructure processes with Ansible and Bash scripting
+  - Managed storage (LVM, NFS, Oracle ZFS Appliance), networking (firewalld, iptables), and containerization (Docker Compose)
+  - Configured and maintained web services and print management with Apache HTTP Server, NGINX, and CUPS
+  - Handled customer support (changes, incidents, requests) across Redmine, ServiceNow, and iTop, collaborating with Database, Middleware, and Big Data teams, and keeping documentation current in Microsoft OneNote
   - Provided 24/7 on-call support
-  - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Sep. 2018 - Apr. 2022
+  - Trained newcomers on customer infrastructure, procedures, and ticket handling through structured knowledge transfer
+  date: Sep. 2018 — Apr. 2022
