@@ -2,9 +2,13 @@ subject: Education
 listing-order: 5
 icon: "/assets/img/graduation-cap.svg"
 contents:
-- title: Network and Systems Administration, ATEC
+- title: ATEC
+  url: "https://www.atec.pt/"
+  role: Network and Systems Administration
   description: EQF Level 5
   date: Jun. 2016 — Sep. 2017
-- title: Network and Systems Technician, ATEC
+- title: ATEC
+  url: "https://www.atec.pt/"
+  role: Network and Systems Technician
   description: EQF Level 4
   date: Nov. 2013 — May 2016
