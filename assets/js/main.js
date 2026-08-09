@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
+
+        var favicon = document.getElementById('theme-favicon');
+        if (favicon) {
+            favicon.href = next === 'dark'
+                ? '/assets/img/favicon-dark.svg'
+                : '/assets/img/favicon-light.svg';
+        }
     });
 
     document.querySelectorAll('img[alt="devicon"][title]').forEach((icon) => {
@@ -48,9 +55,14 @@ document.addEventListener('DOMContentLoaded', function(){
     function updateScrollState(){
         var scrollPos = document.documentElement.scrollTop;
         var wh = window.innerHeight;
+        var maxScroll = document.documentElement.scrollHeight - wh;
 
         Array.from(tocbox.querySelectorAll('li')).forEach(function(tocItem){
             tocItem.classList.remove('active');
+        });
+
+        Array.from(headers).forEach(function(h){
+            h.classList.remove('active');
         });
 
         var currHead;
@@ -61,9 +73,23 @@ document.addEventListener('DOMContentLoaded', function(){
             if (scrollPos > headPos) currHead = h;
         });
 
+        // The midpoint check above can leave the very first or very last
+        // section unreachable (a short section's own threshold can fall
+        // before the page even loads, or past the page's actual max
+        // scroll) — pin them explicitly at the scroll extremes instead.
+        if (scrollPos <= 0) {
+            currHead = headers[0];
+        } else if (scrollPos >= maxScroll - 1) {
+            currHead = headers[headers.length - 1];
+        }
+
         if (currHead != undefined){
             let tocLink = document.getElementById("toc-id-" + currHead.textContent);
             tocLink.classList.add('active');
+            // Mirrors the nav highlight onto the section's own badge, so
+            // both agree on which section is "current" instead of only
+            // the sidebar knowing.
+            currHead.classList.add('active');
         }
     }
 

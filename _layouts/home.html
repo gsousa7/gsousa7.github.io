@@ -10,20 +10,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon-light.svg' | prepend: site.baseurl }}" id="theme-favicon">
   <script>
     (function() {
       var saved = localStorage.getItem('theme');
       if (saved === 'dark' || saved === 'light') {
         document.documentElement.setAttribute('data-theme', saved);
       }
+      var isDark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.getElementById('theme-favicon').href = isDark
+        ? '{{ "/assets/img/favicon-dark.svg" | prepend: site.baseurl }}'
+        : '{{ "/assets/img/favicon-light.svg" | prepend: site.baseurl }}';
     })();
   </script>
   {% seo %}
-
-  <link rel="icon" type="image/x-icon" href="{{ site.icon_img | prepend: site.baseurl }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.icon_img | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
-  <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;650;700&display=swap' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap' rel='stylesheet'>
 </head>
 
 <body>
@@ -43,43 +45,43 @@
       </div>
       <ul class="personal-info">
         {% if site.phone_number %}
-        <li><a aria-label="My Phone">
+        <li><a aria-label="My Phone" class="hover-tip" data-tip="{{ site.phone_number }}" tabindex="0">
           <img src="{{ '/assets/img/phone.svg' | prepend: site.baseurl }}" alt="My Phone Number">
           <div><span>{{ site.phone_number }}</span></div>
         </a></li>
         {% endif %}
         {% if site.address %}
-        <li><a aria-label="My Address" href="https://www.google.com/maps/search/{{ site.address_query | default: site.address }}">
+        <li><a aria-label="My Address" class="hover-tip" data-tip="{{ site.address }}" href="https://www.google.com/maps/search/{{ site.address_query | default: site.address }}">
           <img src="{{ '/assets/img/location-dot.svg' | prepend: site.baseurl }}" alt="My Address">
           <div><span>{{ site.address }}</span></div>
         </a></li>
         {% endif %}
         {% if site.email %}
-          <li><a aria-label="My Email" href="mailto:{{ site.email }}">
+          <li><a aria-label="My Email" class="hover-tip" data-tip="{{ site.email }}" href="mailto:{{ site.email }}">
             <img src="{{ '/assets/img/envelope.svg' | prepend: site.baseurl }}" alt="My Email">
             <div><span>{{ site.email }}</span></div>
           </a></li>
         {% endif %}
         {% if site.linkedin_username %}
-          <li><a aria-label="My LinkedIn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+          <li><a aria-label="My LinkedIn" class="hover-tip" data-tip="LinkedIn — @{{ site.linkedin_username }}" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
             <img src="{{ '/assets/img/linkedin.svg' | prepend: site.baseurl }}" alt="My LinkedIn">
             <div><span>@{{ site.linkedin_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.github_username %}
-          <li><a aria-label="My Github" href="https://github.com/{{ site.github_username }}">
+          <li><a aria-label="My Github" class="hover-tip" data-tip="GitHub — @{{ site.github_username }}" href="https://github.com/{{ site.github_username }}">
             <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My Github">
             <div><span>@{{ site.github_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.gitlab_username %}
-          <li><a aria-label="My GitLab" href="https://gitlab.com/{{ site.gitlab_username }}">
+          <li><a aria-label="My GitLab" class="hover-tip" data-tip="GitLab — @{{ site.gitlab_username }}" href="https://gitlab.com/{{ site.gitlab_username }}">
             <img src="{{ '/assets/img/gitlab.svg' | prepend: site.baseurl }}" alt="My GitLab">
             <div><span>@{{ site.gitlab_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.credly_username %}
-          <li><a aria-label="My Credly" href="https://www.credly.com/users/{{ site.credly_username }}">
+          <li><a aria-label="My Credly" class="hover-tip" data-tip="Credly — @{{ site.credly_username }}" href="https://www.credly.com/users/{{ site.credly_username }}">
             <img src="{{ '/assets/img/credly.svg' | prepend: site.baseurl }}" alt="My Credly">
             <div><span>@{{ site.credly_username }}</span></div>
           </a></li>
@@ -126,7 +128,7 @@
       {% for subject in meta %}
         <li class="subject" id="{{ subject.subject }}">
           <h2 class="subject-name">
-            <div>
+            <div class="hover-tip" data-tip="{{ subject.subject }}" tabindex="0">
               <img class="subject-icon" src="{{ subject.icon | prepend: site.baseurl }}" alt="{{ subject.subject | prepend: site.baseurl }}">
             </div>
             {{ subject.subject }}
@@ -156,21 +158,31 @@
                       </span>
                     {% endif %}
                   </div>
-                  {% for item in member %}
-                    {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" %}
-                      {% if item[1].first %}
-                        <ul>
-                          {% for subitem in item[1] %}
-                          <li class="subitem">
-                            {{ subitem | markdownify }}
-                          </li>
-                          {% endfor %}
-                        </ul>
-                      {% else %}
-                        {{ item[1] | markdownify }}
+                  {% capture member_body %}
+                    {% for item in member %}
+                      {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" %}
+                        {% if item[1].first %}
+                          <ul>
+                            {% for subitem in item[1] %}
+                            <li class="subitem">
+                              {{ subitem | markdownify }}
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        {% else %}
+                          {{ item[1] | markdownify }}
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
-                  {% endfor %}
+                    {% endfor %}
+                  {% endcapture %}
+                  {% if subject.subject == "Experiences" and forloop.first == false %}
+                    <details class="collapsible-entry">
+                      <summary><span class="label-closed">Show details</span><span class="label-open">Hide details</span></summary>
+                      {{ member_body }}
+                    </details>
+                  {% else %}
+                    {{ member_body }}
+                  {% endif %}
               </li>
               {% endfor %}
           </ul>

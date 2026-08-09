@@ -1,17 +1,26 @@
 subject: Skills
-listing-order: 2
+listing-order: 3
 icon: "/assets/img/screwdriver-wrench.svg"
 contents:
-  - title: Scripting Languages
+  - title: Cloud, Virtualization & Infrastructure
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-plain.svg 'Bash')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg 'Python')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg 'Microsoft Azure')
+      ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg 'Proxmox')
+      <img class='devicon-aws-light' src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' alt='devicon' title='Amazon Web Services'>
+      <img class='devicon-aws-dark' src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' alt='devicon' title='Amazon Web Services'>
+     "
+  - title: Containerization & Orchestration
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg 'Docker')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
+      ![devicon](https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg 'Helm')
+      ![devicon](/assets/img/kustomize.png 'Kustomize')
+      ![devicon](/assets/img/istio-icon-color.svg 'Istio')
     "
-  - title: Operating Systems
+  - title: Automation
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg 'Linux')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg 'Debian')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original.svg 'Red Hat Enterprise Linux')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg 'Ansible')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg 'Terraform')
     "
   - title: Continuous Integration & Continuous Delivery
     description: "
@@ -20,26 +29,6 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg 'Azure DevOps')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg 'ArgoCD')
       ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jfrog.svg 'JFrog Artifactory')
-    "
-  - title: Automation
-    description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg 'Ansible')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg 'Terraform')
-    "
-  - title: Web Servers, Proxies & Reverse Proxies
-    description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg 'Apache HTTPD')
-      ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/haproxy.svg 'HAProxy')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg 'NGINX')
-      ![devicon](/assets/img/squid.png 'Squid')
-    "
-  - title: Containerization & Orchestration
-    description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg 'Docker')
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg 'Kubernetes')
-      ![devicon](https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg 'Helm')
-      ![devicon](/assets/img/kustomize.png 'Kustomize')
-      ![devicon](/assets/img/istio-icon-color.svg 'Istio')
     "
   - title: Monitoring & Observability
     description: "
@@ -50,17 +39,28 @@ contents:
       ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nagios.svg 'Nagios')
       ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/checkmk.svg 'Checkmk')
     "
-  - title: Cloud, Virtualization & Infrastructure
+  - title: Web Servers, Proxies & Reverse Proxies
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg 'Microsoft Azure')
-      ![devicon](https://raw.githubusercontent.com/devicons/devicon/develop/icons/proxmox/proxmox-original-wordmark.svg 'Proxmox')
-      <img class='devicon-aws-light' src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' alt='devicon' title='Amazon Web Services'>
-      <img class='devicon-aws-dark' src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' alt='devicon' title='Amazon Web Services'>
-     "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg 'Apache HTTPD')
+      ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/haproxy.svg 'HAProxy')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg 'NGINX')
+      ![devicon](/assets/img/squid.png 'Squid')
+    "
   - title: Infrastructure Services
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vault/vault-original.svg 'HashiCorp Vault')
       "
+  - title: Operating Systems
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg 'Linux')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg 'Debian')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original.svg 'Red Hat Enterprise Linux')
+    "
+  - title: Scripting Languages
+    description: "
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-plain.svg 'Bash')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg 'Python')
+    "
   - title: Agile & Collaboration Tools
     description: "
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg 'Confluence')
