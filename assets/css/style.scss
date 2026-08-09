@@ -387,19 +387,20 @@ a { text-decoration:none; }
         margin-left: 1.25rem;
         margin-top: 1rem;
 
-        // Solid CSS triangle instead of a thin ">" glyph — a hairline
-        // character can vanish to antialiasing at certain sub-pixel
-        // positions on standard-density screens; a filled shape can't.
+        // Chevron drawn from two rotated CSS borders instead of a thin ">"
+        // glyph — a hairline character can vanish to antialiasing at
+        // certain sub-pixel positions on standard-density screens; a
+        // border-based shape renders as solid geometry and can't.
         &:before {
             content: "";
             position: absolute;
-            left: -0.65rem;
-            top: 0.4em;
-            width: 0;
-            height: 0;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-left: 6px solid var(--theme3-dark);
+            left: -0.7rem;
+            top: 0.45em;
+            width: 6px;
+            height: 6px;
+            border-top: 2px solid var(--theme3-dark);
+            border-right: 2px solid var(--theme3-dark);
+            transform: rotate(45deg);
         }
     }
 
