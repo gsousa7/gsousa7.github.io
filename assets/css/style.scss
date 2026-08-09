@@ -73,10 +73,13 @@ html, body {
 
 body {
     margin:0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--color-background);
     color: var(--font-dark);
     transition: background-color 0.3s ease, color 0.3s ease;
+    // Digits keep a fixed width by default so stacked numbers (dates,
+    // durations) never wobble out of alignment.
+    font-variant-numeric: tabular-nums;
 
     &:before{ display: none; }
 }
@@ -149,6 +152,41 @@ html[data-theme="dark"] #contents .devicon-aws-dark {
     }
 }
 
+// .hover-tip is the same pattern as .devicon-tip (kept as an alias so
+// existing skill-icon markup doesn't need renaming) — used consistently
+// wherever a hover label is needed: skill icons, contact icons, section
+// badges. Top-level (not nested under #contents) since contact icons live
+// in the sidebar, outside #contents. :focus-visible makes it reachable by
+// keyboard/tap, not just mouse hover.
+.devicon-tip, .hover-tip {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        content: attr(data-tip);
+        position: absolute;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px 10px;
+        background: #2a2a2a;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: nowrap;
+        border-radius: 4px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+        z-index: 5;
+    }
+
+    &:hover:after,
+    &:focus-visible:after {
+        opacity: 1;
+    }
+}
+
 ul, li {
     list-style:none;
     padding:0;
@@ -173,12 +211,17 @@ a { text-decoration:none; }
         // Bottom margin kept tight so the download button reads as part of
         // this profile group, not the start of the content below.
         margin: 4.5rem auto 1rem;
-        padding: 1.75rem 1rem 1rem;
+        padding: 1.25rem 1rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--theme4-medium);
-        border-radius: 20px;
+        // Thin outline instead of a solid fill — groups photo/name/contacts
+        // visually without reading as a big colour block. Gold rather than
+        // green, matching the photo's own border instead of introducing a
+        // second accent right next to it.
+        background-color: transparent;
+        border: 1px solid var(--theme3-dark);
+        border-radius: 16px;
     }
 
     .profile-zone .profile-img-frame {
@@ -210,7 +253,7 @@ a { text-decoration:none; }
     }
 
     .profile-zone .personal-info span {
-        color: white;
+        color: var(--font-dark);
         display: inline-flex;
         font-size: 0;
         vertical-align: middle;
@@ -227,7 +270,7 @@ a { text-decoration:none; }
         vertical-align: middle;
         margin-right: 0.5rem;
         transition: all .75s;
-        filter: var(--icon-filter-contact);
+        filter: var(--icon-filter-contact-sidebar);
     }
 
     .profile-zone .personal-info {
@@ -258,8 +301,12 @@ a { text-decoration:none; }
         font-weight: 650;
     }
 
-    .name-zone h1 { color: #ffffff; }
-    .name-zone h2 { color: #ffffff; }
+    // Inter runs a little wider than Open Sans at the same size — without
+    // this the name wraps to two lines inside the fixed-width sidebar.
+    .name-zone h1 { font-size: 1.55rem; }
+
+    .name-zone h1 { color: var(--font-dark); }
+    .name-zone h2 { color: var(--theme4-dark); }
 }
 
 #print-btn-group {
@@ -280,7 +327,7 @@ a { text-decoration:none; }
     border-radius: 24px;
     background: var(--theme4-medium);
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -303,15 +350,15 @@ a { text-decoration:none; }
     color: var(--font-dark);
     position: relative;
 
-    ul { margin-bottom: 3rem; }
+    ul { margin-bottom: 2rem; }
 
-    li { 
-        margin-top: 2rem;
+    li {
+        margin-top: 1.5rem;
         line-height: 100%;
     }
 
     .subject-name {
-        margin: 3rem auto;
+        margin: 2.25rem auto;
         color: var(--font-dark);
         font-weight: 650;
         position: relative;
@@ -328,6 +375,37 @@ a { text-decoration:none; }
             margin-left: 0;
             transform: translateY(6px);
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            // Disc behind the icon — without it the glyph sits straight on
+            // the page background (low contrast, especially dark mode) and
+            // the active ring below has no breathing room, cutting right
+            // into the icon's own shape. Same tone the ≥768px badge already
+            // uses (see its own rule further down) so mobile and desktop
+            // read as the same color, not two different treatments.
+            background: var(--theme3-dim);
+            box-shadow: 0 0 0 0 transparent;
+            transition: box-shadow 0.25s ease;
+        }
+    }
+
+    // Icon itself sized down a bit so it sits inside the disc above with
+    // some margin, instead of filling it edge to edge.
+    .subject-name .subject-icon {
+        width: 24px;
+    }
+
+    // Mirrors the sidebar nav's active-section highlight onto the section's
+    // own badge, so scrolling keeps both in visual agreement. Desktop/tablet
+    // only — on mobile it read as visual clutter, better without it. Uses
+    // font-dark rather than either accent hue: the badge disc and icon are
+    // already gold-toned, so a gold ring barely showed up, and green is
+    // already spoken for elsewhere (the current-role pipeline dot) — a
+    // neutral high-contrast ring avoids both problems.
+    @media (min-width: 768px) {
+        .subject-name.active div {
+            box-shadow: 0 0 0 3px var(--font-dark);
         }
     }
 
@@ -421,19 +499,20 @@ a { text-decoration:none; }
         margin-left: 1.25rem;
         margin-top: 1rem;
 
-        // Solid CSS triangle instead of a thin ">" glyph — a hairline
-        // character can vanish to antialiasing at certain sub-pixel
-        // positions on standard-density screens; a filled shape can't.
+        // Chevron drawn from two rotated CSS borders instead of a thin ">"
+        // glyph — a hairline character can vanish to antialiasing at
+        // certain sub-pixel positions on standard-density screens; a
+        // border-based shape renders as solid geometry and can't.
         &:before {
             content: "";
             position: absolute;
-            left: -0.65rem;
-            top: 0.4em;
-            width: 0;
-            height: 0;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-left: 6px solid var(--theme3-dark);
+            left: -0.7rem;
+            top: 0.45em;
+            width: 6px;
+            height: 6px;
+            border-top: 2px solid var(--theme3-dark);
+            border-right: 2px solid var(--theme3-dark);
+            transform: rotate(45deg);
         }
     }
 
@@ -493,34 +572,6 @@ a { text-decoration:none; }
     // for this live outside #contents, near the other data-theme overrides.
     .devicon-aws-dark { display: none; }
 
-    .devicon-tip {
-        position: relative;
-        display: inline-block;
-
-        &:after {
-            content: attr(data-tip);
-            position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 4px 10px;
-            background: #2a2a2a;
-            color: #ffffff;
-            font-size: 12px;
-            line-height: 1.4;
-            white-space: nowrap;
-            border-radius: 4px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.2s;
-            z-index: 5;
-        }
-
-        &:hover:after {
-            opacity: 1;
-        }
-    }
-
     ul + p { margin-top: -2rem; }
 
     .content-header + .item { margin-top: 0; }
@@ -537,6 +588,75 @@ a { text-decoration:none; }
     #Experiences .item:first-child .content-header:before {
         background: var(--theme4-dark);
         box-shadow: 0 0 0 3px var(--theme4-light);
+    }
+
+    // Subtle "live" pulse ring around the current role's dot — a second
+    // pseudo-element since :before is already the dot itself. Position
+    // mirrors :before at each breakpoint (see the ≥1024px override below).
+    #Experiences .item:first-child .content-header:after {
+        content: "";
+        position: absolute;
+        top: 21px;
+        left: -20px;
+        width: 14px;
+        aspect-ratio: 1.0;
+        border-radius: 4px;
+        background: var(--theme4-dark);
+        z-index: 3;
+        animation: pipeline-pulse 1.2s ease-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #Experiences .item:first-child .content-header:after {
+            animation: none;
+            opacity: 0.2;
+        }
+    }
+
+    @keyframes pipeline-pulse {
+        0%   { transform: scale(0.7); opacity: 0.5; }
+        70%  { transform: scale(2.2); opacity: 0; }
+        100% { transform: scale(2.2); opacity: 0; }
+    }
+
+    // Older roles collapse by default — only the current one (above) stays
+    // fully expanded. Chevron rotates instead of the browser's default
+    // disclosure triangle, to match the bullet marker's visual language.
+    .collapsible-entry {
+        summary {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--theme4-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            list-style: none;
+            margin-top: 0.75rem;
+
+            &::-webkit-details-marker { display: none; }
+
+            &:before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-top: 2px solid currentColor;
+                border-right: 2px solid currentColor;
+                transform: rotate(45deg);
+                transition: transform 0.2s ease;
+            }
+        }
+
+        .label-open { display: none; }
+
+        &[open] summary {
+            margin-bottom: 0.25rem;
+
+            &:before { transform: rotate(135deg); }
+
+            .label-closed { display: none; }
+            .label-open { display: inline; }
+        }
     }
 
     #Languages {
@@ -608,13 +728,13 @@ a { text-decoration:none; }
 
         .subject { margin-top: 6rem; }
 
-        .item:nth-child(1) { margin-top: 2rem; }
+        .item:nth-child(1) { margin-top: 1.5rem; }
 
         .item ul { margin-top: 0; }
 
         .subject-name {
             margin-left: auto;
-            margin-bottom: 3rem;
+            margin-bottom: 2.25rem;
             padding: 0;
             border: none;
 
@@ -646,6 +766,11 @@ a { text-decoration:none; }
             // this width instead of the mobile line's own offset. Header is
             // single-line here too, so it also needs its own top offset back.
             &:before { left: -55px; top: 7px; }
+        }
+
+        #Experiences .item:first-child .content-header:after {
+            left: -55px;
+            top: 7px;
         }
 
         .content-header p,
@@ -697,6 +822,7 @@ a { text-decoration:none; }
             margin: 0 0 1.5rem;
             padding: 0;
             background: none;
+            border: none;
             border-radius: 0;
         }
 
@@ -716,6 +842,11 @@ a { text-decoration:none; }
                 clip-path: none !important;
                 color: var(--font-dark);
             }
+
+            // Label is already permanently visible here (unlike the compact
+            // icon row at narrower widths) — the hover tooltip would just
+            // duplicate it.
+            a.hover-tip:after { display: none; }
 
             img {
                 filter: var(--icon-filter-contact-sidebar);
@@ -780,13 +911,17 @@ a { text-decoration:none; }
         position: relative;
         z-index: 5;
         width: auto;
-        max-width: 980px;
+        // 300px sidebar + 900px content = 1200px total, landing in the
+        // brief's suggested ~1100-1250px max content width (was 980px,
+        // i.e. 1280px total — a bit past the top of that range).
+        max-width: 900px;
         margin: 0 0 0 calc(var(--sidebar-width) + max(0px, calc((100vw - var(--max-layout-width)) / 2)));
         padding: 3rem;
 
         img { max-width: 100%; }
     }
 }
+
 
 @media print {
     // Faithful to the on-screen site: keep colours, icon sizes and spacing as-is.
