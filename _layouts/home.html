@@ -10,6 +10,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
   {% seo %}
 
   <link rel="icon" type="image/x-icon" href="{{ site.icon_img | prepend: site.baseurl }}">
@@ -19,6 +27,10 @@
 </head>
 
 <body>
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <img class="theme-icon-sun" src="{{ '/assets/img/sun.svg' | prepend: site.baseurl }}" alt="">
+    <img class="theme-icon-moon" src="{{ '/assets/img/moon.svg' | prepend: site.baseurl }}" alt="">
+  </button>
   <div id="page-sidebar">
   <div id="about">
     <div class="profile-zone">
@@ -58,6 +70,12 @@
           <li><a aria-label="My Github" href="https://github.com/{{ site.github_username }}">
             <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My Github">
             <div><span>@{{ site.github_username }}</span></div>
+          </a></li>
+        {% endif %}
+        {% if site.gitlab_username %}
+          <li><a aria-label="My GitLab" href="https://gitlab.com/{{ site.gitlab_username }}">
+            <img src="{{ '/assets/img/gitlab.svg' | prepend: site.baseurl }}" alt="My GitLab">
+            <div><span>@{{ site.gitlab_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.credly_username %}
@@ -102,10 +120,16 @@
   <div id="sidebar">
     <ul class="toc-box"></ul>
   </div>
-  <a id="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF">
-    <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="Download CV as PDF">
-    <span>Download CV as PDF</span>
-  </a>
+  <div id="print-btn-group">
+    <a class="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF (Chromium)">
+      <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="">
+      <span>Download CV (Chromium)</span>
+    </a>
+    <a class="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV_rendercv.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF (RenderCV)">
+      <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="">
+      <span>Download CV (RenderCV)</span>
+    </a>
+  </div>
   </div>
   <div id="contents">
     <ul>

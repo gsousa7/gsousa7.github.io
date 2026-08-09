@@ -12,11 +12,11 @@ contents:
   - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable artifact storage and distribution across CI/CD pipelines
   - Managed and maintained multiple industrial platforms across different Maisons, ensuring platform availability, compliance, and alignment with each maison's operational requirements
   - Monitored platform health via Datadog, opening incidents upon detection, resolving in-scope issues directly, and assigning or escalating to relevant internal teams or external parties (software vendors, Maison IT) when outside scope
-  - Owned incident communications end-to-end — notifying stakeholders on opening, providing periodic status updates on root cause and remediation progress, and reporting final resolution outcomes
+  - Owned incident communications end-to-end - notifying stakeholders on opening, providing periodic status updates on root cause and remediation progress, and reporting final resolution outcomes
   - Tracked internal tasks and project progress in JIRA and managed incident response and service requests through ServiceNow
   - Created and maintained technical documentation in Confluence
   - Participated in Root Cause Analysis and Post-Mortem processes, documenting findings and driving corrective actions to improve platform reliability
-  date: Mar. 2026 - Present
+  date: Mar. 2026 — Present
 - title: AXA Group Operations
   url: "https://www.axa.com/"
   role: DevOps Engineer
@@ -28,12 +28,11 @@ contents:
   - Managed High-Performance Computing cluster (HPC Pack on Windows Server) maintenance and troubleshoot
   - Automated processes with Bash & PowerShell scripting and Azure DevOps pipelines
   - Reviewed Microsoft Defender for Cloud and implemented recommendations according to product architecture and/or company security policies
-  - Automated processes with Bash scripting
   - Provided product support (Changes, Incidents and Requests) using JIRA and ServiceNow
   - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Confluence
   - Collaborated with multiple teams (Developers and L3) to troubleshoot and deploy specific requirements
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Sep. 2024 - Feb. 2026
+  date: Sep. 2024 — Feb. 2026
 - title: Timestamp
   url: "https://www.timestampgroup.com/en"
   role: Cloud Engineer
@@ -48,7 +47,7 @@ contents:
   - Created and maintained technical documentation for installations, deployments, architecture, changes, incidents and processes using Azure DevOps and Confluence
   - Collaborated with multiple teams (Developers, L3 and Systems) to troubleshoot and deploy specific requirements
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Apr. 2022 - Sep. 2024
+  date: Apr. 2022 — Sep. 2024
 - title: Timestamp
   url: "https://www.timestampgroup.com/en"
   role: Linux System Administrator
@@ -66,4 +65,4 @@ contents:
   - Collaborated with multiple teams (Database, Middleware, and Big Data) to troubleshoot and deploy specific requirements
   - Provided 24/7 on-call support
   - Mentored and guided newcomers in understanding customer infrastructure architecture, procedures, and ticket management through knowledge transfer and practical experience
-  date: Sep. 2018 - Apr. 2022
+  date: Sep. 2018 — Apr. 2022
