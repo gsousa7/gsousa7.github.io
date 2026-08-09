@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function(){
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', function(){
+        var current = document.documentElement.getAttribute('data-theme');
+
+        if (!current) {
+            current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        var next = current === 'dark' ? 'light' : 'dark';
+
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    });
+
     document.querySelectorAll('img[alt="devicon"][title]').forEach((icon) => {
         const wrap = document.createElement('span');
         wrap.className = 'devicon-tip';
@@ -30,9 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
         tocbox.append(tocItem);
     });
 
-    var contents = document.querySelectorAll('.subject, .item');
-
-    function updateScrollState(skipTransition){
+    function updateScrollState(){
         var scrollPos = document.documentElement.scrollTop;
         var wh = window.innerHeight;
 
@@ -48,34 +61,12 @@ document.addEventListener('DOMContentLoaded', function(){
             if (scrollPos > headPos) currHead = h;
         });
 
-        Array.from(contents).forEach(function(c){
-            let contentPos = c.getBoundingClientRect().top + window.scrollY - wh;
-
-            if (c.classList.contains("appear")) return;
-
-            if (scrollPos < contentPos) return;
-
-            if (skipTransition) c.style.transition = 'none';
-
-            c.classList.add('appear');
-        });
-
         if (currHead != undefined){
             let tocLink = document.getElementById("toc-id-" + currHead.textContent);
             tocLink.classList.add('active');
         }
     }
 
-    // Content already within view on first load should render immediately,
-    // not fade in — only re-enable the transition once that's painted.
-    updateScrollState(true);
-    requestAnimationFrame(function(){
-        requestAnimationFrame(function(){
-            Array.from(contents).forEach(function(c){
-                c.style.transition = '';
-            });
-        });
-    });
-
+    updateScrollState();
     setInterval(updateScrollState, 200);
 });
