@@ -20,6 +20,7 @@
     --icon-filter-servicenow: none;
     --icon-filter-bash: none;
     --icon-filter-datadog: none;
+    --icon-filter-proxmox: none;
 }
 
 :root[data-theme="dark"] {
@@ -39,6 +40,7 @@
     --icon-filter-servicenow: brightness(0) invert(1);
     --icon-filter-bash: brightness(0) invert(1);
     --icon-filter-datadog: brightness(0) invert(1);
+    --icon-filter-proxmox: brightness(0) invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,6 +61,7 @@
         --icon-filter-servicenow: brightness(0) invert(1);
         --icon-filter-bash: brightness(0) invert(1);
         --icon-filter-datadog: brightness(0) invert(1);
+        --icon-filter-proxmox: brightness(0) invert(1);
     }
 }
 
@@ -215,12 +218,7 @@ a { text-decoration:none; }
         display: flex;
         flex-direction: column;
         align-items: center;
-        // Thin outline instead of a solid fill — groups photo/name/contacts
-        // visually without reading as a big colour block. Gold rather than
-        // green, matching the photo's own border instead of introducing a
-        // second accent right next to it.
         background-color: transparent;
-        border: 1px solid var(--theme3-dark);
         border-radius: 16px;
     }
 
@@ -312,6 +310,11 @@ a { text-decoration:none; }
 #print-btn-group {
     margin: 1.5rem auto 0;
     align-self: center;
+    // #page-sidebar isn't a flex container below 1024px, so without this
+    // the group (a normal block box) stretches to the full card width —
+    // and its own flex children (align-items default: stretch) then
+    // stretch to match, making the button span edge-to-edge on mobile.
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -322,13 +325,13 @@ a { text-decoration:none; }
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 20px;
+    padding: 6px 16px;
     border: none;
     border-radius: 24px;
     background: var(--theme4-medium);
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
@@ -565,6 +568,12 @@ a { text-decoration:none; }
         filter: var(--icon-filter-datadog);
     }
 
+    // Wordmark's "PROXMOX" text is near-black — invisible against the dark
+    // mode background otherwise.
+    img[alt="devicon"][src$="proxmox-original-wordmark.svg"] {
+        filter: var(--icon-filter-proxmox);
+    }
+
     // AWS keeps its official black+orange mark in light mode; dark mode
     // swaps to the all-orange lockup instead of filtering the dark text
     // (a filter can't recolor just the text without also washing out the
@@ -718,6 +727,13 @@ a { text-decoration:none; }
                 };
             }
         }
+    }
+
+    // Slightly smaller on mobile (base rule below) reads better on a narrow
+    // screen; back to full size once there's room to spare.
+    .print-btn {
+        padding: 8px 20px;
+        font-size: 14px;
     }
 
     #contents {
