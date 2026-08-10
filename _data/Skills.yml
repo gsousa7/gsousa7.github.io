@@ -41,7 +41,7 @@ contents:
     "
   - title: Web Servers, Proxies & Reverse Proxies
     description: "
-      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg 'Apache HTTPD')
+      ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg 'Apache HTTP')
       ![devicon](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/haproxy.svg 'HAProxy')
       ![devicon](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg 'NGINX')
       ![devicon](/assets/img/squid.png 'Squid')
