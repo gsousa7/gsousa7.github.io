@@ -145,7 +145,7 @@
           </h2>
           <ul>
               {% for member in subject.contents %}
-              <li class="item">
+              <li class="item{% if member.active %} active-role{% endif %}">
                   <div class="content-header">
                     {% if member.role %}
                       <p>
@@ -170,7 +170,7 @@
                   </div>
                   {% capture member_body %}
                     {% for item in member %}
-                      {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" %}
+                      {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" and item[0] != "active" %}
                         {% if item[1].first %}
                           <ul>
                             {% for subitem in item[1] %}
@@ -185,7 +185,7 @@
                       {% endif %}
                     {% endfor %}
                   {% endcapture %}
-                  {% if subject.subject == "Experiences" and forloop.first == false %}
+                  {% if subject.subject == "Experiences" and member.active != true %}
                     <details class="collapsible-entry">
                       <summary><span class="label-closed">Show details</span><span class="label-open">Hide details</span></summary>
                       {{ member_body }}

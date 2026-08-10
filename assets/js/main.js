@@ -95,4 +95,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
     updateScrollState();
     setInterval(updateScrollState, 200);
+
+    // A closed <details> renders no content at all when printed (Chromium's
+    // internal ::details-content wrapper can't be overridden by author CSS)
+    // — force every collapsible entry open for the duration of the print,
+    // then restore whatever state each one was actually in.
+    var collapsedBeforePrint = [];
+
+    window.addEventListener('beforeprint', function(){
+        collapsedBeforePrint = Array.from(document.querySelectorAll('.collapsible-entry:not([open])'));
+        collapsedBeforePrint.forEach((el) => { el.open = true; });
+    });
+
+    window.addEventListener('afterprint', function(){
+        collapsedBeforePrint.forEach((el) => { el.open = false; });
+        collapsedBeforePrint = [];
+    });
 });

@@ -583,9 +583,9 @@ a { text-decoration:none; }
         visibility: hidden;
     }
 
-    // The current role (first, most recent entry) reads as the "active"
+    // The role flagged `active: yes` in Experience.yml reads as the "active"
     // stage in the pipeline — the rest are completed stages.
-    #Experiences .item:first-child .content-header:before {
+    #Experiences .item.active-role .content-header:before {
         background: var(--theme4-dark);
         box-shadow: 0 0 0 3px var(--theme4-light);
     }
@@ -593,7 +593,7 @@ a { text-decoration:none; }
     // Subtle "live" pulse ring around the current role's dot — a second
     // pseudo-element since :before is already the dot itself. Position
     // mirrors :before at each breakpoint (see the ≥1024px override below).
-    #Experiences .item:first-child .content-header:after {
+    #Experiences .item.active-role .content-header:after {
         content: "";
         position: absolute;
         top: 21px;
@@ -607,7 +607,7 @@ a { text-decoration:none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-        #Experiences .item:first-child .content-header:after {
+        #Experiences .item.active-role .content-header:after {
             animation: none;
             opacity: 0.2;
         }
@@ -768,7 +768,7 @@ a { text-decoration:none; }
             &:before { left: -55px; top: 7px; }
         }
 
-        #Experiences .item:first-child .content-header:after {
+        #Experiences .item.active-role .content-header:after {
             left: -55px;
             top: 7px;
         }
@@ -940,6 +940,12 @@ a { text-decoration:none; }
         display: none !important;
     }
 
+    // main.js forces every .collapsible-entry open for the duration of the
+    // print (a closed <details> renders no content at all on paper — see
+    // its beforeprint handler); the toggle itself is meaningless on paper.
+    // (Selector lives inside the #contents block below — the base rule it
+    // overrides is nested under #contents too, and needs matching specificity.)
+
     // The profile card's own flex-wrap layout already spaces the contact
     // list correctly at any width — print just needs its hover-reveal text
     // permanently visible instead of clipped to zero width. (This replaces
@@ -988,6 +994,8 @@ a { text-decoration:none; }
         .item:nth-child(1) { margin-top: 2rem; }
 
         .item ul { margin-top: 0; }
+
+        .collapsible-entry summary { display: none; }
 
         .subject-name {
             margin-left: auto;

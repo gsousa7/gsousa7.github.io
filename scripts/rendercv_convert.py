@@ -138,11 +138,14 @@ cv = {
     "design": {
         "theme": "classic",
         "colors": {
-            "name": "rgb(58, 90, 64)",
-            "headline": "rgb(58, 90, 64)",
-            "connections": "rgb(58, 90, 64)",
-            "section_titles": "rgb(58, 90, 64)",
-            "links": "rgb(58, 90, 64)",
+            # Mirrors the site's own two-tone hierarchy instead of a single
+            # green (site: --theme3-dark gold for name/badges, --theme4-dark
+            # green for job title/links).
+            "name": "rgb(168, 149, 90)",
+            "headline": "rgb(61, 114, 93)",
+            "connections": "rgb(168, 149, 90)",
+            "section_titles": "rgb(168, 149, 90)",
+            "links": "rgb(61, 114, 93)",
         },
     },
     "locale": {"language": "english"},
