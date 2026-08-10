@@ -303,7 +303,7 @@ a { text-decoration:none; }
     // this the name wraps to two lines inside the fixed-width sidebar.
     .name-zone h1 { font-size: 1.55rem; }
 
-    .name-zone h1 { color: var(--font-dark); }
+    .name-zone h1 { color: var(--theme3-dark); }
     .name-zone h2 { color: var(--theme4-dark); }
 }
 
@@ -891,7 +891,6 @@ a { text-decoration:none; }
             text-align: center;
             width: 100%;
 
-            h1 { color: var(--theme3-dark); }
             h2 { color: var(--theme4-dark); }
         }
     }
