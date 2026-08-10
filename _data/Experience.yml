@@ -5,6 +5,7 @@ contents:
 - title: Richemont
   url: "https://www.richemont.com/"
   role: DevOps Engineer
+  active: yes
   description:
   - Implemented end-to-end observability for Kubernetes workloads with OpenTelemetry, and built Datadog dashboards to monitor platform health, application performance, and key business metrics across manufacturing environments
   - Managed and maintained JFrog Artifactory as the central artifact repository, ensuring reliable storage and distribution across CI/CD pipelines

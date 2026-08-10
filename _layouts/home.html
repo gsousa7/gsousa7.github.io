@@ -123,13 +123,9 @@
     <ul class="toc-box"></ul>
   </div>
   <div id="print-btn-group">
-    <a class="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF (Chromium)">
+    <a class="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF">
       <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="">
-      <span>Download CV (Chromium)</span>
-    </a>
-    <a class="print-btn" href="{{ '/assets/files/Goncalo_Sousa_CV_rendercv.pdf' | prepend: site.baseurl }}" download aria-label="Download CV as PDF (RenderCV)">
-      <img src="{{ '/assets/img/download.svg' | prepend: site.baseurl }}" alt="">
-      <span>Download CV (RenderCV)</span>
+      <span>Download CV</span>
     </a>
   </div>
   </div>
@@ -145,7 +141,7 @@
           </h2>
           <ul>
               {% for member in subject.contents %}
-              <li class="item">
+              <li class="item{% if member.active %} active-role{% endif %}">
                   <div class="content-header">
                     {% if member.role %}
                       <p>
@@ -170,7 +166,7 @@
                   </div>
                   {% capture member_body %}
                     {% for item in member %}
-                      {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" %}
+                      {% if item[0] != "title" and item[0] != "date" and item[0] != "url" and item[0] != "role" and item[0] != "active" %}
                         {% if item[1].first %}
                           <ul>
                             {% for subitem in item[1] %}
@@ -185,7 +181,7 @@
                       {% endif %}
                     {% endfor %}
                   {% endcapture %}
-                  {% if subject.subject == "Experiences" and forloop.first == false %}
+                  {% if subject.subject == "Experiences" and member.active != true %}
                     <details class="collapsible-entry">
                       <summary><span class="label-closed">Show details</span><span class="label-open">Hide details</span></summary>
                       {{ member_body }}
