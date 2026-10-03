@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function(){
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
 
+        // Swap only the file name so the site's baseurl prefix (set by
+        // Jekyll in the <head> script) is kept.
         var favicon = document.getElementById('theme-favicon');
         if (favicon) {
-            favicon.href = next === 'dark'
-                ? '/assets/img/favicon-dark.svg'
-                : '/assets/img/favicon-light.svg';
+            favicon.href = favicon.href.replace(/favicon-(dark|light)\.svg/, 'favicon-' + next + '.svg');
         }
     });
 
@@ -33,22 +33,21 @@ document.addEventListener('DOMContentLoaded', function(){
     const tocbox = document.querySelector('.toc-box');
     var headers = document.querySelectorAll('.subject-name');
 
+    // Real in-page anchors, so the TOC works with the keyboard and
+    // Ctrl/middle-click; smooth scrolling comes from CSS (and is skipped
+    // under prefers-reduced-motion).
     headers.forEach((h) => {
+        const sectionId = h.parentElement.id;
+
         let tocItem = document.createElement("li");
-        tocItem.id = "toc-id-" + h.textContent;
+        tocItem.id = "toc-id-" + sectionId;
 
         let itemLink = document.createElement("a");
         itemLink.classList.add("content-link");
-        itemLink.textContent = h.textContent;
+        itemLink.href = "#" + sectionId;
+        itemLink.textContent = h.textContent.trim();
 
         tocItem.append(itemLink);
-
-        tocItem.addEventListener('click', function(){
-            h.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-
         tocbox.append(tocItem);
     });
 
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         if (currHead != undefined){
-            let tocLink = document.getElementById("toc-id-" + currHead.textContent);
+            let tocLink = document.getElementById("toc-id-" + currHead.parentElement.id);
             tocLink.classList.add('active');
             // Mirrors the nav highlight onto the section's own badge, so
             // both agree on which section is "current" instead of only
@@ -93,8 +92,23 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    // Recompute only when the page actually scrolls or changes size (window
+    // resize, or a "Show details" entry expanding), at most once per frame,
+    // instead of polling on a timer forever.
+    var scrollStatePending = false;
+
+    function scheduleScrollState(){
+        if (scrollStatePending) return;
+        scrollStatePending = true;
+        requestAnimationFrame(function(){
+            scrollStatePending = false;
+            updateScrollState();
+        });
+    }
+
     updateScrollState();
-    setInterval(updateScrollState, 200);
+    window.addEventListener('scroll', scheduleScrollState, { passive: true });
+    new ResizeObserver(scheduleScrollState).observe(document.body);
 
     // A closed <details> renders no content at all when printed (Chromium's
     // internal ::details-content wrapper can't be overridden by author CSS)

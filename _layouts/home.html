@@ -10,6 +10,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffdfb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#3A3A3A" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon-light.svg' | prepend: site.baseurl }}" id="theme-favicon">
   <script>
     (function() {
@@ -25,10 +27,13 @@
   </script>
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap' rel='stylesheet'>
 </head>
 
 <body>
+  <a class="skip-link" href="#contents">Skip to content</a>
   <button id="theme-toggle" aria-label="Toggle dark mode">
     <img class="theme-icon-sun" src="{{ '/assets/img/sun.svg' | prepend: site.baseurl }}" alt="">
     <img class="theme-icon-moon" src="{{ '/assets/img/moon.svg' | prepend: site.baseurl }}" alt="">
@@ -37,82 +42,82 @@
   <div id="about">
     <div class="profile-zone">
       <div class="profile-img-frame">
-        <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
+        <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="{{ site.name }}" width="600" height="600" fetchpriority="high">
       </div>
       <div class="name-zone">
         <h1>{{ site.name }}</h1>
-        <h2>{{ site.job }}</h2>
+        <p class="job-title">{{ site.job }}</p>
       </div>
       <ul class="personal-info">
         {% if site.phone_number %}
-        <li><a aria-label="My Phone" class="hover-tip" data-tip="{{ site.phone_number }}" tabindex="0">
-          <img src="{{ '/assets/img/phone.svg' | prepend: site.baseurl }}" alt="My Phone Number">
+        <li><a aria-label="My Phone" class="hover-tip" data-tip="{{ site.phone_number }}" href="tel:{{ site.phone_number | remove: ' ' }}">
+          <img src="{{ '/assets/img/phone.svg' | prepend: site.baseurl }}" alt="">
           <div><span>{{ site.phone_number }}</span></div>
         </a></li>
         {% endif %}
         {% if site.address %}
         <li><a aria-label="My Address" class="hover-tip" data-tip="{{ site.address }}" href="https://www.google.com/maps/search/{{ site.address_query | default: site.address }}">
-          <img src="{{ '/assets/img/location-dot.svg' | prepend: site.baseurl }}" alt="My Address">
+          <img src="{{ '/assets/img/location-dot.svg' | prepend: site.baseurl }}" alt="">
           <div><span>{{ site.address }}</span></div>
         </a></li>
         {% endif %}
         {% if site.email %}
           <li><a aria-label="My Email" class="hover-tip" data-tip="{{ site.email }}" href="mailto:{{ site.email }}">
-            <img src="{{ '/assets/img/envelope.svg' | prepend: site.baseurl }}" alt="My Email">
+            <img src="{{ '/assets/img/envelope.svg' | prepend: site.baseurl }}" alt="">
             <div><span>{{ site.email }}</span></div>
           </a></li>
         {% endif %}
         {% if site.linkedin_username %}
           <li><a aria-label="My LinkedIn" class="hover-tip" data-tip="LinkedIn — @{{ site.linkedin_username }}" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-            <img src="{{ '/assets/img/linkedin.svg' | prepend: site.baseurl }}" alt="My LinkedIn">
+            <img src="{{ '/assets/img/linkedin.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.linkedin_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.github_username %}
           <li><a aria-label="My Github" class="hover-tip" data-tip="GitHub — @{{ site.github_username }}" href="https://github.com/{{ site.github_username }}">
-            <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My Github">
+            <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.github_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.gitlab_username %}
           <li><a aria-label="My GitLab" class="hover-tip" data-tip="GitLab — @{{ site.gitlab_username }}" href="https://gitlab.com/{{ site.gitlab_username }}">
-            <img src="{{ '/assets/img/gitlab.svg' | prepend: site.baseurl }}" alt="My GitLab">
+            <img src="{{ '/assets/img/gitlab.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.gitlab_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.credly_username %}
           <li><a aria-label="My Credly" class="hover-tip" data-tip="Credly — @{{ site.credly_username }}" href="https://www.credly.com/users/{{ site.credly_username }}">
-            <img src="{{ '/assets/img/credly.svg' | prepend: site.baseurl }}" alt="My Credly">
+            <img src="{{ '/assets/img/credly.svg' | prepend: site.baseurl }}" class="icon-credly" alt="">
             <div><span>@{{ site.credly_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.twitter_username %}
           <li><a aria-label="My Twitter" href="https://twitter.com/{{ site.twitter_username }}">
-            <img src="{{ '/assets/img/twitter.svg' | prepend: site.baseurl }}" alt="My Twitter">
+            <img src="{{ '/assets/img/twitter.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.twitter_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.instagram_username %}
           <li><a aria-label="My Instagram" href="https://www.instagram.com/{{ site.instagram_username }}">
-            <img src="{{ '/assets/img/instagram.svg' | prepend: site.baseurl }}" alt="My Instagram">
+            <img src="{{ '/assets/img/instagram.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.instagram_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.facebook_username %}
           <li><a aria-label="My Facebook" href="https://www.facebook.com/{{ site.facebook_username }}">
-            <img src="{{ '/assets/img/facebook.svg' | prepend: site.baseurl }}" alt="My Facebook">
+            <img src="{{ '/assets/img/facebook.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.facebook_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.youtube_username %}
           <li><a aria-label="My Youtube" href="https://www.youtube.com/{{ site.youtube_username }}">
-            <img src="{{ '/assets/img/youtube.svg' | prepend: site.baseurl }}" alt="My Youtube">
+            <img src="{{ '/assets/img/youtube.svg' | prepend: site.baseurl }}" alt="">
             <div><span>@{{ site.youtube_username }}</span></div>
           </a></li>
         {% endif %}
         {% if site.blog_url %}
           <li><a aria-label="My Blog" href="{{ site.blog_url }}">
-            <img src="{{ '/assets/img/house.svg' | prepend: site.baseurl }}" alt="My Blog">
+            <img src="{{ '/assets/img/house.svg' | prepend: site.baseurl }}" alt="">
             <div><span>{{ site.blog_url }}</span></div>
           </a></li>
         {% endif %}
@@ -129,13 +134,13 @@
     </a>
   </div>
   </div>
-  <div id="contents">
+  <main id="contents">
     <ul>
       {% for subject in meta %}
         <li class="subject" id="{{ subject.subject }}">
           <h2 class="subject-name">
-            <div class="hover-tip" data-tip="{{ subject.subject }}" tabindex="0">
-              <img class="subject-icon" src="{{ subject.icon | prepend: site.baseurl }}" alt="{{ subject.subject | prepend: site.baseurl }}">
+            <div class="hover-tip" data-tip="{{ subject.subject }}">
+              <img class="subject-icon" src="{{ subject.icon | prepend: site.baseurl }}" alt="">
             </div>
             {{ subject.subject }}
           </h2>
@@ -144,16 +149,16 @@
               <li class="item{% if member.active %} active-role{% endif %}">
                   <div class="content-header">
                     {% if member.role %}
-                      <p>
+                      <h3>
                         {{ member.role }} @
                         {% if member.url %}
-                          <a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt=""></a>
+                          <a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt="" width="13" height="13"><span class="sr-only"> (opens in new tab)</span></a>
                         {% else %}
                           {{ member.title | markdownify | strip_html | strip_newlines }}
                         {% endif %}
-                      </p>
+                      </h3>
                     {% elsif member.url %}
-                      <p><a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt=""></a></p>
+                      <h3><a class="content-title-link" href="{{ member.url }}" target="_blank" rel="noopener">{{ member.title | markdownify | strip_html | strip_newlines }}<img class="external-link-icon" src="{{ '/assets/img/external-link.svg' | prepend: site.baseurl }}" alt="" width="13" height="13"><span class="sr-only"> (opens in new tab)</span></a></h3>
                     {% else %}
                       {{ member.title | markdownify }}
                     {% endif %}
@@ -195,12 +200,12 @@
         </li>
       {% endfor %}
       </ul>
-  </div>
+  </main>
   <div id="footer">
     <span>
       Copyright © {{ site.time | date: "%Y" }}
     </span>
   </div>
+  <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 </body>
-<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 </html>

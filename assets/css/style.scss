@@ -12,6 +12,7 @@
     --theme4-dim: #5C8876;
     --theme4-dark: #3D725D;
     --font-dark: #202424;
+    color-scheme: light;
     --max-layout-width: 1600px;
     --sidebar-width: 300px;
     --icon-filter-contact: invert(10%) sepia(4%) saturate(5321%) hue-rotate(201deg) brightness(99%) contrast(90%);
@@ -34,6 +35,7 @@
     --theme4-dim: #6fa08c;
     --theme4-dark: #8fd1b5;
     --font-dark: #ece8e1;
+    color-scheme: dark;
     --icon-filter-contact: brightness(0) invert(1);
     --icon-filter-contact-sidebar: brightness(0) invert(1);
     --icon-filter-link: brightness(0) invert(1);
@@ -55,6 +57,7 @@
         --theme4-dim: #6fa08c;
         --theme4-dark: #8fd1b5;
         --font-dark: #ece8e1;
+        color-scheme: dark;
         --icon-filter-contact: brightness(0) invert(1);
         --icon-filter-contact-sidebar: brightness(0) invert(1);
         --icon-filter-link: brightness(0) invert(1);
@@ -115,6 +118,51 @@ body {
     .theme-icon-moon { display: block; }
 
     &:hover { background: var(--theme4-dim); }
+}
+
+// One consistent keyboard focus ring for every interactive element —
+// :focus-visible so it shows for keyboard/tab navigation, not on click.
+a, button, summary {
+    &:focus-visible {
+        outline: 2px solid var(--theme4-dark);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+}
+
+// Smooth scroll for the TOC's in-page anchors, unless the visitor asked
+// for reduced motion.
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
+// Visually hidden but still read by screen readers.
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// Off-screen until focused — first Tab stop, jumps past the sidebar.
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 20;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: var(--theme4-dark);
+    color: var(--color-background);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:focus { top: 1rem; }
 }
 
 :root[data-theme="dark"] #theme-toggle,
@@ -267,7 +315,7 @@ a { text-decoration:none; }
         cursor: pointer;
         vertical-align: middle;
         margin-right: 0.5rem;
-        transition: all .75s;
+        transition: transform .75s, filter .75s;
         filter: var(--icon-filter-contact-sidebar);
     }
 
@@ -281,7 +329,7 @@ a { text-decoration:none; }
 
             &:hover {
                 img {
-                    width: 28px;
+                    transform: scale(1.4);
                     filter: brightness(0) saturate(100%) invert(77%) sepia(47%) saturate(1006%) hue-rotate(358deg) brightness(104%) contrast(105%);
                 }
             }
@@ -294,7 +342,7 @@ a { text-decoration:none; }
     }
 
     .name-zone h1,
-    .name-zone h2 {
+    .name-zone .job-title {
         margin: 0;
         font-weight: 650;
     }
@@ -304,7 +352,7 @@ a { text-decoration:none; }
     .name-zone h1 { font-size: 1.55rem; }
 
     .name-zone h1 { color: var(--theme3-dark); }
-    .name-zone h2 { color: var(--theme4-dark); }
+    .name-zone .job-title { color: var(--theme4-dark); font-size: 1.5rem; }
 }
 
 #print-btn-group {
@@ -360,7 +408,12 @@ a { text-decoration:none; }
         line-height: 100%;
     }
 
+    // TOC anchors target the section <li>; same breathing room above the
+    // heading that .subject-name's own scroll-margin-top gives it.
+    .subject { scroll-margin-top: 2.5rem; }
+
     .subject-name {
+        text-wrap: balance;
         margin: 2.25rem auto;
         color: var(--font-dark);
         font-weight: 650;
@@ -455,9 +508,9 @@ a { text-decoration:none; }
             z-index: 4;
         }
 
-        p, span { line-height: 150%; }
+        :is(p, h3), span { line-height: 150%; }
 
-        p {
+        :is(p, h3) {
             font-weight: 600;
             font-size: 16px;
             color: var(--font-dark);
@@ -669,7 +722,7 @@ a { text-decoration:none; }
     }
 
     #Languages {
-        .content-header p { margin-bottom: 0; }
+        .content-header :is(p, h3) { margin-bottom: 0; }
         .content-header { margin-bottom: 0.25rem; }
         .content-header + p { margin-top: 0; }
     }
@@ -776,7 +829,7 @@ a { text-decoration:none; }
         .content-date img { width: 24px; }
 
         .content-header {
-            p { font-size: 18px; }
+            :is(p, h3) { font-size: 18px; }
 
             // Dot re-aligns to the sidebar-border/body::before line used at
             // this width instead of the mobile line's own offset. Header is
@@ -789,7 +842,7 @@ a { text-decoration:none; }
             top: 7px;
         }
 
-        .content-header p,
+        .content-header :is(p, h3),
         .content-date {
             display: table-cell;
         }
@@ -868,17 +921,17 @@ a { text-decoration:none; }
                 filter: var(--icon-filter-contact-sidebar);
             }
 
-            img[alt="My Credly"] {
+            img.icon-credly {
                 width: 25px;
                 margin-right: 3px;
             }
 
             a:hover img {
-                width: 20px !important;
+                transform: none !important;
                 filter: var(--icon-filter-contact-sidebar) !important;
             }
 
-            a:hover img[alt="My Credly"] {
+            a:hover img.icon-credly {
                 width: 25px !important;
             }
 
@@ -891,7 +944,7 @@ a { text-decoration:none; }
             text-align: center;
             width: 100%;
 
-            h2 { color: var(--theme4-dark); }
+            .job-title { color: var(--theme4-dark); }
         }
     }
 
@@ -905,14 +958,18 @@ a { text-decoration:none; }
 
         li {
             margin: 2px 0;
-            padding: 6px 12px;
             border-radius: 8px;
             background: none;
-            transition: all 0.3s;
-            cursor: pointer;
+            transition: background-color 0.3s;
 
+            // Link fills the whole row, so the full highlighted pill is
+            // clickable and keyboard-focusable, not just the text.
             a {
+                display: block;
+                padding: 6px 12px;
+                border-radius: 8px;
                 color: var(--font-dark);
+                text-decoration: none;
                 text-shadow: none;
             }
         }
@@ -1035,10 +1092,10 @@ a { text-decoration:none; }
         .content-date img { width: 24px; }
 
         .content-header {
-            p { font-size: 18px; }
+            :is(p, h3) { font-size: 18px; }
         }
 
-        .content-header p,
+        .content-header :is(p, h3),
         .content-date {
             display: table-cell;
         }
